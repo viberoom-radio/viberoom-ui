@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Icon } from 'shared/ui/icon';
-import { ButtonGroup } from './components/ButtonGroup';
+import { ButtonGroup } from './components/button-group';
 import { Props } from './types';
 import * as Styled from './styles';
 
