@@ -40,7 +40,7 @@ export class Visualizer extends Component<Props, State> {
       require('aframe');
       require('aframe-animation-component');
       require('aframe-environment-component');
-      require('utils/aframe');
+      require('shared/utils/aframe');
       this.setState({ appRendered: true });
     }
   }
