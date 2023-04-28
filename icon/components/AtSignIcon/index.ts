@@ -1,1 +1,0 @@
-export { AtSignIcon } from './AtSignIcon';

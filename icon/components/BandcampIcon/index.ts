@@ -1,1 +1,0 @@
-export { BandcampIcon } from './BandcampIcon';

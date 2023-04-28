@@ -1,1 +1,0 @@
-export { MixcloudIcon } from './MixcloudIcon';

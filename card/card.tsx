@@ -1,9 +1,9 @@
 import React from 'react';
-import { CardLink } from './components/CardLink';
-import { CardHeading } from './components/CardHeading';
-import { CardDescription } from './components/CardDescription';
-import { CardBody } from './components/CardBody';
-import { CardFooter } from './components/CardFooter';
+import { CardLink } from './components/card-link';
+import { CardHeading } from './components/card-heading';
+import { CardDescription } from './components/card-description';
+import { CardBody } from './components/card-body';
+import { CardFooter } from './components/card-footer';
 import { Props } from './types';
 import * as Styled from './styles';
 

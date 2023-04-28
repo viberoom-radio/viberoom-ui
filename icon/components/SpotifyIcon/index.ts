@@ -1,1 +1,0 @@
-export { SpotifyIcon } from './SpotifyIcon';

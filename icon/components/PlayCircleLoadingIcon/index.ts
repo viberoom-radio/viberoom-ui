@@ -1,1 +1,0 @@
-export { PlayCircleLoadingIcon } from './PlayCircleLoadingIcon';
