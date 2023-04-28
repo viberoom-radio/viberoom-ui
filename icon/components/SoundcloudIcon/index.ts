@@ -1,0 +1,1 @@
+export { SoundcloudIcon } from './SoundcloudIcon';

@@ -1,0 +1,1 @@
+export { VolumeHighIcon } from './VolumeHighIcon';
