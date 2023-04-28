@@ -1,4 +1,4 @@
-import { MediaEntity } from 'types/MediaEntity';
+import { MediaEntity } from 'shared/types/media-entity';
 
 export type Props = {
   track: {

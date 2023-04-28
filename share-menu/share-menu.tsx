@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'shared/ui/button';
 import { getShareMetadata } from 'utils/track';
-import { ShareDataExtended } from 'types/ShareDataExtended';
+import { ShareDataExtended } from 'shared/types/share-data-extended';
 import { Props } from './types';
 
 export const ShareMenu = ({ track }: Props) => {

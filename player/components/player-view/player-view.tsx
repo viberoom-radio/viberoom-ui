@@ -9,7 +9,7 @@ import { generateTrackURL, getMediaMetadata } from 'utils/track';
 import { vibrate } from '../../utils';
 import { Props } from '../../types';
 import * as Styled from './styles';
-import { Track as TrackEntity } from 'types/Track';
+import { Track as TrackEntity } from 'shared/types/track';
 
 export class PlayerView extends Component<Props> {
   state = {

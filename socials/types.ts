@@ -1,4 +1,4 @@
-import { Socials } from 'types/Socials';
+import { Socials } from 'shared/types/socials';
 
 export type Props = {
   socials: Socials;

@@ -1,5 +1,5 @@
-import { Host } from 'types/Host';
-import { Track } from 'types/Track';
+import { Host } from 'shared/types/host';
+import { Track } from 'shared/types/track';
 
 export type Props = {
   host: string;
