@@ -1,6 +1,6 @@
 import React from 'react';
 import { PortableText } from '@portabletext/react';
-import { Link } from 'components/Link';
+import { Link } from 'shared/ui/link';
 import { Quote } from 'shared/ui/quote';
 import { Props, Components } from './types';
 

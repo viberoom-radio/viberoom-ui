@@ -1,5 +1,5 @@
 import React from 'react';
-import { Track } from 'components/Track';
+import { Track } from 'shared/ui/track';
 import { PlaylistItem } from './components/playlist-item';
 import { Props } from './types';
 import * as Styled from './styles';
