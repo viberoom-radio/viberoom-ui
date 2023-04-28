@@ -5,7 +5,7 @@ import { Modal } from 'shared/ui/modal';
 import { Track } from 'shared/ui/track';
 import { TrackModal } from 'shared/ui/track-modal';
 import { VolumeControl } from 'shared/ui/volume-control';
-import { generateTrackURL, getMediaMetadata } from 'utils/track';
+import { generateTrackURL, getMediaMetadata } from 'shared/utils/track';
 import { vibrate } from '../../utils';
 import { Props } from '../../types';
 import * as Styled from './styles';

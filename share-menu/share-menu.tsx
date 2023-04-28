@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'shared/ui/button';
-import { getShareMetadata } from 'utils/track';
+import { getShareMetadata } from 'shared/utils/track';
 import { ShareDataExtended } from 'shared/types/share-data-extended';
 import { Props } from './types';
 

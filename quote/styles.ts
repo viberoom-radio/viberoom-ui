@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from 'constants/colors';
+import { colors } from 'shared/constants/colors';
 
 export const Quote = styled.blockquote`
   margin: 0;

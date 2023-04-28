@@ -2,7 +2,7 @@ import React from 'react';
 import { Track } from 'shared/ui/track';
 import { Input } from 'shared/ui/input';
 import { ShareMenu } from 'shared/ui/share-menu';
-import { getShareMetadata } from 'utils/track';
+import { getShareMetadata } from 'shared/utils/track';
 
 export const TrackModal = ({ track }) => (
   <>

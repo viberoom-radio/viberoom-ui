@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'constants/colors';
+import { colors } from 'shared/constants/colors';
 import { StyledProps } from './types';
 
 const highlightedStyles = css`

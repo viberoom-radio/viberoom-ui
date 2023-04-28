@@ -1,5 +1,5 @@
 import React from 'react';
-import { getDevice } from 'utils/device';
+import { getDevice } from 'shared/utils/device';
 import { PlayerView } from './components/player-view';
 import { PlayerContext } from './PlayerContext';
 

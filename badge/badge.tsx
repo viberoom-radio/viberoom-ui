@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'shared/ui/button';
-import { IOS_APP_URL } from 'constants/index';
+import { IOS_APP_URL } from 'shared/constants/index';
 
 export const Badge = () => (
   <Button href={IOS_APP_URL} isPlain color="transparent">
