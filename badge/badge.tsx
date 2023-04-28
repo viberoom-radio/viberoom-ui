@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'shared/ui/button';
 import { IOS_APP_URL } from 'constants/index';
 
 export const Badge = () => (
