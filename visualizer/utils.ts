@@ -1,38 +1,5 @@
-export const getConfig = () => ({
-  title: 'default',
-  environment: {
-    active: true,
-    seed: 1,
-    lighting: 'distant',
-    lightPosition: '-0.72 0.53 0.97',
-    fog: null,
-    flatShading: true,
-    playArea: null,
-    ground: 'hills',
-    groundYScale: null,
-    groundTexture: 'none',
-    groundColor: '#0d1831',
-    groundColor2: '#0d1831',
-    dressing: 'none',
-    dressingAmount: null,
-    dressingColor: null,
-    dressingScale: null,
-    dressingVariance: '0 0 0',
-    dressingUniformScale: false,
-    dressingOnPlayArea: null,
-    grid: '1x1',
-    gridColor: '#2c52a755',
-    shadow: false,
-    skyType: 'none',
-    skyColor: '#0d1831',
-    horizonColor: '#0d1831',
-  },
-  icosahedron: {
-    material: 'normal',
-    color: {
-      default: '#13264c',
-      defaultMobile: '#1a3d72',
-      active: '#0028f0',
-    },
-  },
-});
+import { EnvironmentConfig } from './types';
+
+export const convertConfigToString = (config: EnvironmentConfig) => {
+  return JSON.stringify(config).replaceAll('"', '').replaceAll(',', ';');
+};
