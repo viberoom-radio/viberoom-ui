@@ -1,8 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Howl } from 'howler';
-import { Button } from 'shared/ui/button';
-import { Modal } from 'shared/ui/modal';
-import { TrackModal } from 'shared/ui/track-modal';
 import { PlayButton } from 'features/play-button';
 import { VolumeControl } from 'features/volume-control';
 import { Track } from 'entities/track';
@@ -10,6 +7,7 @@ import { Track as TrackEntity } from 'shared/types/track';
 import { generateTrackURL, getNextTrackIndex, updateMetadata } from './utils';
 import { Props } from '../../types';
 import * as Styled from './styles';
+import { TrackInfoControl } from 'features/current-track-info';
 
 export const PlayerView = ({
   tracks,
@@ -21,30 +19,13 @@ export const PlayerView = ({
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [nextTrackIndex, setNextTrackIndex] = useState(1);
   const [currentTime, setCurrentTime] = useState(0);
-  const [isTrackModalShown, setIsTrackModalShown] = useState(false);
   const track = tracks[currentTrackIndex];
-  const isDisabled = !track;
-  const isClickable = device.isMobile && !isDisabled;
+  const isLoading = !track;
+  const isClickable = device.isMobile && !isLoading;
   let audio = useRef<Howl>(null);
   let audioNext = useRef<Howl>(null);
   // Cache previous props value to ignore component render caused by HMR
   let wasPlaying = useRef(false);
-
-  const openTrackModal = () => {
-    setIsTrackModalShown(true);
-  };
-
-  const closeTrackModal = () => {
-    setIsTrackModalShown(false);
-  };
-
-  const onTrackClick = () => {
-    if (!isClickable) {
-      return;
-    }
-
-    openTrackModal();
-  };
 
   const onLoaded = () => {
     const nextTrack = tracks[nextTrackIndex];
@@ -123,44 +104,34 @@ export const PlayerView = ({
 
   return (
     <>
-      <Styled.Player onClick={onTrackClick}>
-        <Styled.PlayerPlay>
+      <Styled.Player>
+        <Styled.PlayButton>
           <PlayButton track={track} />
-        </Styled.PlayerPlay>
+        </Styled.PlayButton>
 
-        <Styled.PlayerTrack>
+        <Styled.Track>
           <Track {...track} />
-        </Styled.PlayerTrack>
+        </Styled.Track>
 
-        {!isDisabled && (
-          <Styled.PlayerExtra>
-            <Styled.PlayerVolumeControl>
+        {!isLoading && (
+          <Styled.ExtraControls>
+            <Styled.VolumeControl>
               <VolumeControl />
-            </Styled.PlayerVolumeControl>
-            <Styled.PlayerMore>
-              <Button
-                icon="chevron-up"
-                color="transparent"
-                onClick={openTrackModal}
-                ariaLabel="Share playing track..."
-              />
-            </Styled.PlayerMore>
-          </Styled.PlayerExtra>
+            </Styled.VolumeControl>
+            <Styled.TrackInfoControl>
+              <TrackInfoControl track={track} />
+            </Styled.TrackInfoControl>
+          </Styled.ExtraControls>
         )}
 
-        {!isDisabled && (
-          <Styled.PlayerProgress
+        {!isLoading && (
+          <Styled.ProgressBar
             style={{
               width: (currentTime / track.duration) * 100 + '%',
             }}
           />
         )}
       </Styled.Player>
-      <Modal isShown={isTrackModalShown} close={closeTrackModal}>
-        <Modal.Content>
-          <TrackModal track={track} />
-        </Modal.Content>
-      </Modal>
     </>
   );
 };

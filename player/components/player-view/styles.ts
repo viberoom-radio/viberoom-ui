@@ -16,7 +16,7 @@ export const Player = styled.div`
   }
 `;
 
-export const PlayerPlay = styled.div`
+export const PlayButton = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -29,23 +29,23 @@ export const PlayerPlay = styled.div`
   }
 `;
 
-export const PlayerTrack = styled.div`
+export const Track = styled.div`
   flex: 1 1 auto;
   min-width: 0;
 `;
 
-export const PlayerExtra = styled.div`
+export const ExtraControls = styled.div`
   display: flex;
   flex-shrink: 0;
 `;
 
-export const PlayerVolumeControl = styled.div`
+export const VolumeControl = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-export const PlayerProgress = styled.div`
+export const ProgressBar = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -53,4 +53,4 @@ export const PlayerProgress = styled.div`
   background: ${colors.brand};
 `;
 
-export const PlayerMore = styled.div``;
+export const TrackInfoControl = styled.div``;
