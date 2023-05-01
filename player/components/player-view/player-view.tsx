@@ -1,232 +1,192 @@
-import React, { Component, SyntheticEvent } from 'react';
+import React, { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { Howl } from 'howler';
 import { Button } from 'shared/ui/button';
 import { Modal } from 'shared/ui/modal';
-import { Track } from 'entities/track/ui/track';
 import { TrackModal } from 'shared/ui/track-modal';
 import { VolumeControl } from 'shared/ui/volume-control';
-import { generateTrackURL, getMediaMetadata } from 'shared/utils/track';
-import { vibrate } from '../../utils';
+import { Track } from 'entities/track';
+import { Track as TrackEntity } from 'shared/types/track';
+import {
+  generateTrackURL,
+  getNextTrackIndex,
+  updateMetadata,
+  vibrate,
+} from './utils';
 import { Props } from '../../types';
 import * as Styled from './styles';
-import { Track as TrackEntity } from 'shared/types/track';
 
-export class PlayerView extends Component<Props> {
-  state = {
-    currentTrackIndex: 0,
-    nextTrackIndex: 1,
-    currentTime: 0,
-    isTrackModalShown: false,
+export const PlayerView = ({
+  tracks,
+  isPlaying,
+  host,
+  device,
+  setIsPlaying,
+}: Props) => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [nextTrackIndex, setNextTrackIndex] = useState(1);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isTrackModalShown, setIsTrackModalShown] = useState(false);
+  const track = tracks[currentTrackIndex];
+  const playIcon = !track
+    ? 'play-circle-loading'
+    : isPlaying
+    ? 'pause-circle'
+    : 'play-circle';
+  const playText = !track ? 'Player is loading' : isPlaying ? 'Pause' : 'Play';
+  const isDisabled = !track;
+  const isClickable = device.isMobile && !isDisabled;
+  let audio = useRef<Howl>(null);
+  let audioNext = useRef<Howl>(null);
+  // Cache previous props value to ignore component render caused by HMR
+  let wasPlaying = useRef(false);
+
+  const openTrackModal = () => {
+    setIsTrackModalShown(true);
   };
 
-  audio = null;
-  audioNext = null;
+  const closeTrackModal = () => {
+    setIsTrackModalShown(false);
+  };
 
-  constructor(props: Props) {
-    super(props);
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps: Props) {
-    const { tracks } = this.props;
-    const { currentTrackIndex } = this.state;
-    const track = tracks[currentTrackIndex];
-
-    if (this.audio === null && tracks.length > 0) {
-      this.audio = this.createAudio(tracks[currentTrackIndex]);
+  const onTrackClick = () => {
+    if (!isClickable) {
+      return;
     }
 
-    if (this.props.isPlaying !== nextProps.isPlaying) {
-      if (nextProps.isPlaying) {
-        this.audio.play();
-        this.updateMetadata(track);
-      } else {
-        this.audio.pause();
-      }
+    openTrackModal();
+  };
+
+  const onPlayerStateToggle = (event: SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    togglePlay();
+  };
+
+  const onLoaded = () => {
+    const nextTrack = tracks[nextTrackIndex];
+
+    if (!audioNext.current || audioNext.current.state() === 'unloaded') {
+      setTimeout(() => {
+        audioNext.current = createAudio(nextTrack);
+      }, 1000);
     }
-  }
+  };
 
-  updateMetadata(track: TrackEntity) {
-    const metadata = getMediaMetadata(track);
+  // const onTimeUpdate = () => {
+  //   setCurrentTime(audio.current.currentTime);
+  // };
 
-    if ('mediaSession' in navigator && window.MediaMetadata) {
-      navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
-      navigator.mediaSession.setActionHandler(
-        'play',
-        this.togglePlay.bind(this)
-      );
-      navigator.mediaSession.setActionHandler(
-        'pause',
-        this.togglePlay.bind(this)
-      );
-      navigator.mediaSession.setActionHandler('previoustrack', null);
-      navigator.mediaSession.setActionHandler('nexttrack', null);
-      navigator.mediaSession.setActionHandler('stop', null);
-      navigator.mediaSession.setActionHandler('seekbackward', null);
-      navigator.mediaSession.setActionHandler('seekbackward', null);
-      navigator.mediaSession.setActionHandler('seekforward', null);
-      navigator.mediaSession.setActionHandler('seekto', null);
-    }
-  }
+  const onEnded = () => {
+    const newCurrentTrackIndex = getNextTrackIndex(
+      currentTrackIndex,
+      tracks.length
+    );
+    const newNextTrackIndex = getNextTrackIndex(
+      newCurrentTrackIndex,
+      tracks.length
+    );
+    const track = tracks[newCurrentTrackIndex];
+    const nextTrack = tracks[newNextTrackIndex];
 
-  createAudio(track: TrackEntity) {
-    const { host } = this.props;
+    audio.current.unload();
+    audio.current = audioNext.current;
+    audio.current.play();
+    setCurrentTrackIndex(newCurrentTrackIndex);
+    setNextTrackIndex(newNextTrackIndex);
+    audioNext.current = createAudio(nextTrack);
 
+    updateMetadata(track, { play: togglePlay, pause: togglePlay });
+  };
+
+  const togglePlay = () => {
+    vibrate();
+    setIsPlaying(!isPlaying);
+  };
+
+  const createAudio = (track: TrackEntity) => {
     const audio = new Howl({
       src: [generateTrackURL(host, track.id)],
       format: ['mp3'],
       html5: true,
-      onload: this.onLoaded.bind(this),
-      onend: this.onEnded.bind(this),
+      onload: onLoaded,
+      onend: onEnded,
     });
 
-    // audio.ontimeupdate = this.onTimeUpdate.bind(this);
+    // audio.current.ontimeupdate = onTimeUpdate;
 
     return audio;
-  }
+  };
 
-  getNextTrackIndex(currentIndex: number) {
-    const firstIndex = 0;
-    const lastIndex = this.props.tracks.length - 1;
-    const possibleIndex = currentIndex + 1;
-    const nextTrackIndex =
-      possibleIndex > lastIndex ? firstIndex : possibleIndex;
-
-    return nextTrackIndex;
-  }
-
-  onPlayerStateToggle(event: SyntheticEvent<HTMLButtonElement>) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    this.togglePlay();
-  }
-
-  onTrackClick() {
-    this.openTrackModal();
-  }
-
-  onLoaded() {
-    const me = this;
-    const { tracks } = this.props;
-    const { nextTrackIndex } = this.state;
-    const nextTrack = tracks[nextTrackIndex];
-
-    if (!this.audioNext || this.audioNext.state() === 'unloaded') {
-      setTimeout(() => {
-        me.audioNext = me.createAudio(nextTrack);
-      }, 1000);
+  useEffect(() => {
+    if (audio.current === null && tracks.length > 0) {
+      audio.current = createAudio(tracks[currentTrackIndex]);
     }
-  }
+  });
 
-  onTimeUpdate() {
-    const currentTime = this.audio.currentTime;
-    this.setState({ currentTime });
-  }
+  useEffect(() => {
+    const track = tracks[currentTrackIndex];
 
-  onEnded() {
-    const { tracks } = this.props;
-    const { currentTrackIndex } = this.state;
-    const newCurrentTrackIndex = this.getNextTrackIndex(currentTrackIndex);
-    const newNextTrackIndex = this.getNextTrackIndex(newCurrentTrackIndex);
-    const track = tracks[newCurrentTrackIndex];
-    const nextTrack = tracks[newNextTrackIndex];
+    if (isPlaying !== wasPlaying.current) {
+      wasPlaying.current = isPlaying;
 
-    this.audio.unload();
-    this.audio = this.audioNext;
-    this.audio.play();
-    this.setState({
-      currentTrackIndex: newCurrentTrackIndex,
-      nextTrackIndex: newNextTrackIndex,
-    });
-    this.audioNext = this.createAudio(nextTrack);
+      if (isPlaying) {
+        audio.current?.play();
+        updateMetadata(track, { play: togglePlay, pause: togglePlay });
+      } else {
+        audio.current?.pause();
+      }
+    }
+  });
 
-    this.updateMetadata(track);
-  }
+  return (
+    <>
+      <Styled.Player onClick={onTrackClick}>
+        <Styled.PlayerPlay>
+          <Button
+            icon={playIcon}
+            iconSize={50}
+            color="transparent"
+            onClick={onPlayerStateToggle}
+            isPlain={true}
+            isDisabled={isDisabled}
+            ariaLabel={playText}
+          />
+        </Styled.PlayerPlay>
 
-  togglePlay() {
-    vibrate();
-    this.props.setIsPlaying(!this.props.isPlaying);
-  }
+        <Styled.PlayerTrack>
+          <Track {...track} />
+        </Styled.PlayerTrack>
 
-  openTrackModal() {
-    this.setState({ isTrackModalShown: true });
-  }
+        {!isDisabled && (
+          <Styled.PlayerExtra>
+            <Styled.PlayerVolumeControl>
+              <VolumeControl />
+            </Styled.PlayerVolumeControl>
+            <Styled.PlayerMore>
+              <Button
+                icon="chevron-up"
+                color="transparent"
+                onClick={openTrackModal}
+                ariaLabel="Share playing track..."
+              />
+            </Styled.PlayerMore>
+          </Styled.PlayerExtra>
+        )}
 
-  closeTrackModal() {
-    this.setState({ isTrackModalShown: false });
-  }
-
-  render() {
-    const { tracks, isPlaying, device } = this.props;
-    const track = tracks[this.state.currentTrackIndex];
-    const playIcon = !track
-      ? 'play-circle-loading'
-      : isPlaying
-      ? 'pause-circle'
-      : 'play-circle';
-    const playText = !track
-      ? 'Player is loading'
-      : isPlaying
-      ? 'Pause'
-      : 'Play';
-    const isDisabled = !track;
-    const isClickable = device.isMobile && !isDisabled;
-
-    return (
-      <>
-        <Styled.Player
-          onClick={isClickable ? this.onTrackClick.bind(this) : null}
-        >
-          <Styled.PlayerPlay>
-            <Button
-              icon={playIcon}
-              iconSize={50}
-              color="transparent"
-              onClick={this.onPlayerStateToggle.bind(this)}
-              isPlain={true}
-              isDisabled={isDisabled}
-              ariaLabel={playText}
-            />
-          </Styled.PlayerPlay>
-
-          <Styled.PlayerTrack>
-            <Track {...track} />
-          </Styled.PlayerTrack>
-
-          {!isDisabled && (
-            <Styled.PlayerExtra>
-              <Styled.PlayerVolumeControl>
-                <VolumeControl />
-              </Styled.PlayerVolumeControl>
-              <Styled.PlayerMore>
-                <Button
-                  icon="chevron-up"
-                  color="transparent"
-                  onClick={this.onTrackClick.bind(this)}
-                  ariaLabel="Share playing track..."
-                />
-              </Styled.PlayerMore>
-            </Styled.PlayerExtra>
-          )}
-
-          {!isDisabled && (
-            <Styled.PlayerProgress
-              style={{
-                width: (this.state.currentTime / track.duration) * 100 + '%',
-              }}
-            />
-          )}
-        </Styled.Player>
-
-        <Modal
-          isShown={this.state.isTrackModalShown}
-          close={this.closeTrackModal.bind(this)}
-        >
-          <Modal.Content>
-            <TrackModal track={track} />
-          </Modal.Content>
-        </Modal>
-      </>
-    );
-  }
-}
+        {!isDisabled && (
+          <Styled.PlayerProgress
+            style={{
+              width: (currentTime / track.duration) * 100 + '%',
+            }}
+          />
+        )}
+      </Styled.Player>
+      <Modal isShown={isTrackModalShown} close={closeTrackModal}>
+        <Modal.Content>
+          <TrackModal track={track} />
+        </Modal.Content>
+      </Modal>
+    </>
+  );
+};
