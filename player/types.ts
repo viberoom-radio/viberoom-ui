@@ -6,6 +6,8 @@ export type Props = {
   tracks: Track[];
   isPlaying: boolean;
   setIsPlaying: (state: boolean) => void;
+  currentTrackIndex: number;
+  setCurrentTrackIndex: (value: number) => void;
 };
 
 export type PlayerContextProps = {
@@ -13,4 +15,6 @@ export type PlayerContextProps = {
   setIsPlaying?: (value: boolean) => void;
   tracks: Track[];
   host: Host;
+  currentTrackIndex: number;
+  setCurrentTrackIndex: (value: number) => void;
 };
