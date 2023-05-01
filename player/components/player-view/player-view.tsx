@@ -1,21 +1,15 @@
-import React, {
-  SyntheticEvent,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Howl } from 'howler';
 import { Button } from 'shared/ui/button';
 import { Modal } from 'shared/ui/modal';
 import { TrackModal } from 'shared/ui/track-modal';
-import { VolumeControl } from 'shared/ui/volume-control';
+import { PlayButton } from 'features/play-button';
+import { VolumeControl } from 'features/volume-control';
 import { Track } from 'entities/track';
 import { Track as TrackEntity } from 'shared/types/track';
 import { generateTrackURL, getNextTrackIndex, updateMetadata } from './utils';
 import { Props } from '../../types';
 import * as Styled from './styles';
-import { PlayButton } from 'features/play-button';
 
 export const PlayerView = ({
   tracks,
