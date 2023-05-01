@@ -38,15 +38,6 @@ export const getNextTrackIndex = (currentIndex: number, totalCount: number) => {
 };
 
 /**
- * Activates the device vibration if it is supported by its hardware
- */
-export const vibrate = () => {
-  if (window.navigator.vibrate) {
-    window.navigator.vibrate(30);
-  }
-};
-
-/**
  * Creates the track streaming URL
  * @param host audius host URL
  * @param trackId track id

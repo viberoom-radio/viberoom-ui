@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { getDevice } from 'shared/utils/device';
 import { PlayerView } from './components/player-view';
 import { PlayerContext } from './PlayerContext';
 
 export const Player = () => {
-  const { isPlaying, setIsPlaying, tracks, host } =
-    React.useContext(PlayerContext);
+  const { isPlaying, setIsPlaying, tracks, host } = useContext(PlayerContext);
   const device = getDevice();
 
   return (

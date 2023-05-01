@@ -1,4 +1,10 @@
-import React, { SyntheticEvent, useEffect, useRef, useState } from 'react';
+import React, {
+  SyntheticEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Howl } from 'howler';
 import { Button } from 'shared/ui/button';
 import { Modal } from 'shared/ui/modal';
@@ -6,14 +12,10 @@ import { TrackModal } from 'shared/ui/track-modal';
 import { VolumeControl } from 'shared/ui/volume-control';
 import { Track } from 'entities/track';
 import { Track as TrackEntity } from 'shared/types/track';
-import {
-  generateTrackURL,
-  getNextTrackIndex,
-  updateMetadata,
-  vibrate,
-} from './utils';
+import { generateTrackURL, getNextTrackIndex, updateMetadata } from './utils';
 import { Props } from '../../types';
 import * as Styled from './styles';
+import { PlayButton } from 'features/play-button';
 
 export const PlayerView = ({
   tracks,
@@ -27,12 +29,6 @@ export const PlayerView = ({
   const [currentTime, setCurrentTime] = useState(0);
   const [isTrackModalShown, setIsTrackModalShown] = useState(false);
   const track = tracks[currentTrackIndex];
-  const playIcon = !track
-    ? 'play-circle-loading'
-    : isPlaying
-    ? 'pause-circle'
-    : 'play-circle';
-  const playText = !track ? 'Player is loading' : isPlaying ? 'Pause' : 'Play';
   const isDisabled = !track;
   const isClickable = device.isMobile && !isDisabled;
   let audio = useRef<Howl>(null);
@@ -56,13 +52,6 @@ export const PlayerView = ({
     openTrackModal();
   };
 
-  const onPlayerStateToggle = (event: SyntheticEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-
-    togglePlay();
-  };
-
   const onLoaded = () => {
     const nextTrack = tracks[nextTrackIndex];
 
@@ -76,6 +65,10 @@ export const PlayerView = ({
   // const onTimeUpdate = () => {
   //   setCurrentTime(audio.current.currentTime);
   // };
+
+  const togglePlay = useCallback(() => {
+    setIsPlaying(!wasPlaying.current);
+  }, [wasPlaying, setIsPlaying]);
 
   const onEnded = () => {
     const newCurrentTrackIndex = getNextTrackIndex(
@@ -97,11 +90,6 @@ export const PlayerView = ({
     audioNext.current = createAudio(nextTrack);
 
     updateMetadata(track, { play: togglePlay, pause: togglePlay });
-  };
-
-  const togglePlay = () => {
-    vibrate();
-    setIsPlaying(!isPlaying);
   };
 
   const createAudio = (track: TrackEntity) => {
@@ -143,15 +131,7 @@ export const PlayerView = ({
     <>
       <Styled.Player onClick={onTrackClick}>
         <Styled.PlayerPlay>
-          <Button
-            icon={playIcon}
-            iconSize={50}
-            color="transparent"
-            onClick={onPlayerStateToggle}
-            isPlain={true}
-            isDisabled={isDisabled}
-            ariaLabel={playText}
-          />
+          <PlayButton track={track} />
         </Styled.PlayerPlay>
 
         <Styled.PlayerTrack>
