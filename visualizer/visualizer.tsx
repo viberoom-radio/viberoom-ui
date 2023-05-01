@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { PlayerContext } from 'shared/ui/player';
+import { PlayerContext } from 'entities/player';
 import { environmentConfig, icosahedronConfig } from './constants';
 import { convertConfigToString } from './utils';
 import { Props } from './types';

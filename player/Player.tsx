@@ -7,8 +7,8 @@ import React, {
 } from 'react';
 import { Howl } from 'howler';
 import { Track } from 'shared/types/track';
+import { PlayerContext } from 'entities/player';
 import { generateTrackURL, getNextTrackIndex, updateMetadata } from './utils';
-import { PlayerContext } from './player-context';
 
 export const Player = () => {
   const {
