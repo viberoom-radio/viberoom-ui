@@ -5,9 +5,6 @@ export type Props = {
   host: string;
   tracks: Track[];
   isPlaying: boolean;
-  device: {
-    isMobile: boolean;
-  };
   setIsPlaying: (state: boolean) => void;
 };
 

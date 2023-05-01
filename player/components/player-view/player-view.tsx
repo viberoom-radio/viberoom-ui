@@ -13,15 +13,13 @@ export const PlayerView = ({
   tracks,
   isPlaying,
   host,
-  device,
   setIsPlaying,
 }: Props) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [nextTrackIndex, setNextTrackIndex] = useState(1);
-  const [currentTime, setCurrentTime] = useState(0);
+  // const [currentTime, setCurrentTime] = useState(0);
   const track = tracks[currentTrackIndex];
   const isLoading = !track;
-  const isClickable = device.isMobile && !isLoading;
   let audio = useRef<Howl>(null);
   let audioNext = useRef<Howl>(null);
   // Cache previous props value to ignore component render caused by HMR
@@ -124,13 +122,13 @@ export const PlayerView = ({
           </Styled.ExtraControls>
         )}
 
-        {!isLoading && (
+        {/* {!isLoading && (
           <Styled.ProgressBar
             style={{
               width: (currentTime / track.duration) * 100 + '%',
             }}
           />
-        )}
+        )} */}
       </Styled.Player>
     </>
   );
