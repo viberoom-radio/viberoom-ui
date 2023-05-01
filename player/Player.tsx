@@ -6,16 +6,9 @@ import React, {
   //  useState,
 } from 'react';
 import { Howl } from 'howler';
-import { PlayButton } from 'features/play-button';
-import { VolumeControl } from 'features/volume-control';
-import {
-  CurrentTrackInfo,
-  CurrentTrackInfoControl,
-} from 'features/current-track-info';
 import { Track } from 'shared/types/track';
 import { generateTrackURL, getNextTrackIndex, updateMetadata } from './utils';
 import { PlayerContext } from './player-context';
-import * as Styled from './styles';
 
 export const Player = () => {
   const {
@@ -110,36 +103,5 @@ export const Player = () => {
     }
   });
 
-  return (
-    <>
-      <Styled.Player>
-        <Styled.PlayButton>
-          <PlayButton track={track} />
-        </Styled.PlayButton>
-
-        <Styled.Track>
-          <CurrentTrackInfo />
-        </Styled.Track>
-
-        {!isLoading && (
-          <Styled.ExtraControls>
-            <Styled.VolumeControl>
-              <VolumeControl />
-            </Styled.VolumeControl>
-            <Styled.TrackInfoControl>
-              <CurrentTrackInfoControl />
-            </Styled.TrackInfoControl>
-          </Styled.ExtraControls>
-        )}
-
-        {/* {!isLoading && (
-          <Styled.ProgressBar
-            style={{
-              width: (currentTime / track.duration) * 100 + '%',
-            }}
-          />
-        )} */}
-      </Styled.Player>
-    </>
-  );
+  return <div></div>;
 };
