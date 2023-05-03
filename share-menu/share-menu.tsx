@@ -1,8 +1,8 @@
-import React from 'react';
 import { Button } from 'shared/ui/button';
 import { getShareMetadata } from 'shared/utils/track';
 import { ShareDataExtended } from 'shared/types/share-data-extended';
 import { Props } from './types';
+import { ButtonGroup } from '../button-group';
 
 export const ShareMenu = ({ track }: Props) => {
   const shareMetadata = getShareMetadata(track);
@@ -53,7 +53,7 @@ export const ShareMenu = ({ track }: Props) => {
     <>
       <p>Share:</p>
 
-      <Button.Group>
+      <ButtonGroup>
         <Button
           icon="facebook"
           isFluidMobile
@@ -87,7 +87,7 @@ export const ShareMenu = ({ track }: Props) => {
         >
           VK
         </Button>
-      </Button.Group>
+      </ButtonGroup>
     </>
   );
 };

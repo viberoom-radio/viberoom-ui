@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from 'shared/ui/button';
+import { ButtonGroup } from 'shared/ui/button-group';
 import { Props } from './types';
 
 export const Socials = ({ socials }: Props) => (
-  <Button.Group>
+  <ButtonGroup>
     {socials.bandcamp_url && (
       <Button icon="bandcamp" href={socials.bandcamp_url} isFluidMobile>
         Bandcamp
@@ -34,5 +35,5 @@ export const Socials = ({ socials }: Props) => (
         Mixcloud
       </Button>
     )}
-  </Button.Group>
+  </ButtonGroup>
 );

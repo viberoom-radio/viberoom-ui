@@ -1,7 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
 import { Icon } from 'shared/ui/icon';
-import { ButtonGroup } from './components/button-group';
 import { Props } from './types';
 import * as Styled from './styles';
 
@@ -102,5 +100,3 @@ export const Button = ({
     </Link>
   );
 };
-
-Button.Group = ButtonGroup;
