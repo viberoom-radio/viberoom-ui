@@ -6,16 +6,12 @@ const meta: Meta<typeof ButtonGroup> = {
   title: 'Shared/ButtonGroup',
   component: ButtonGroup,
   tags: ['autodocs'],
-  argTypes: {
-    // color: {
-    //   control: 'color',
-    // },
-  },
   render({ ...props }) {
     return (
       <ButtonGroup {...props}>
-        <Button href="#">Button</Button>
-        <Button href="#">Button</Button>
+        <Button href="#">Button 1</Button>
+        <Button href="#">Button 2</Button>
+        <Button href="#">Button 3</Button>
       </ButtonGroup>
     );
   },
@@ -24,9 +20,7 @@ const meta: Meta<typeof ButtonGroup> = {
 export default meta;
 type Story = StoryObj<typeof ButtonGroup>;
 
-export const Default: Story = {
-  args: {},
-};
+export const Default: Story = {};
 
 export const Stacked: Story = {
   args: {
