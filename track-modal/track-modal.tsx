@@ -1,18 +1,19 @@
 import React from 'react';
 import { Track } from 'entities/track/ui/track';
 import { Input } from 'shared/ui/input';
-import { ShareMenu } from 'shared/ui/share-menu';
-import { getShareMetadata } from 'shared/utils/track';
+import { ShareTrack } from 'features/share-track';
+import { getTrackPageUrl } from 'shared/utils/track';
+import { Props } from './types';
 
-export const TrackModal = ({ track }) => (
+export const TrackModal = ({ track }: Props) => (
   <>
     <Track {...track} />
 
     <br />
 
-    <Input defaultValue={getShareMetadata(track).url} />
+    <Input defaultValue={getTrackPageUrl(track.artist.handle, track.id)} />
 
     <hr />
-    <ShareMenu track={track} />
+    <ShareTrack track={track} />
   </>
 );

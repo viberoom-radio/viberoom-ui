@@ -1,12 +1,5 @@
-import { MediaEntity } from 'shared/types/media-entity';
+import { Track } from 'shared/types/track';
 
 export type Props = {
-  track: {
-    artist?: {
-      name: string;
-      handle: string;
-    };
-    artwork?: MediaEntity;
-    title?: string;
-  };
+  track: Track;
 };
