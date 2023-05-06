@@ -1,4 +1,3 @@
-import { Howl } from 'howler';
 import { Host } from 'shared/types/host';
 import { Track } from 'shared/types/track';
 import { AUDIUS_APP_NAME } from './constants';
