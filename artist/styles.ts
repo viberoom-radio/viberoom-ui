@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'shared/styles/theme';
+import { palette } from 'shared/styles/theme';
 import { StyledProps } from './types';
 
 export const ArtistUserpic = styled.div`
@@ -8,7 +8,7 @@ export const ArtistUserpic = styled.div`
   margin: 0 1rem 0 0;
   width: 50px;
   height: 50px;
-  box-shadow: 0 4px 4px -4px ${colors.bg.default};
+  box-shadow: 0 4px 4px -4px ${palette.bg.default};
 `;
 
 const smallStyles = css`

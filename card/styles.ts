@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'shared/styles/theme';
+import { palette } from 'shared/styles/theme';
 import { Props } from './types';
 
 const centeredStyles = css`
@@ -7,7 +7,7 @@ const centeredStyles = css`
 `;
 
 const primaryStyles = css`
-  background-color: ${colors.bg.secondary};
+  background-color: ${palette.bg.secondary};
 `;
 
 export const Card = styled.div<Props>`
@@ -16,7 +16,7 @@ export const Card = styled.div<Props>`
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: ${colors.bg.border};
+  background: ${palette.bg.border};
   border-radius: 0.4rem;
 
   @media only screen and (max-width: 768px) {

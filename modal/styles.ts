@@ -1,5 +1,5 @@
-import { colors } from 'shared/styles/theme';
 import styled, { keyframes } from 'styled-components';
+import { palette } from 'shared/styles/theme';
 
 const fadeIn = keyframes`
   from {
@@ -31,10 +31,10 @@ export const Modal = styled.div`
   width: 100%;
   max-width: 40rem;
   padding: 1.5rem;
-  background-color: ${colors.bg.default};
+  background-color: ${palette.bg.default};
   border-radius: 0.4rem;
   z-index: 40;
-  box-shadow: 0 4px 4px -4px ${colors.bg.default};
+  box-shadow: 0 4px 4px -4px ${palette.bg.default};
 
   @media only screen and (max-width: 768px) {
     top: 100%;
@@ -51,7 +51,7 @@ export const ModalBackdrop = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background: ${colors.bg.tone};
+  background: ${palette.bg.tone};
   z-index: 30;
   animation: ${fadeIn} 0.3s;
 `;
@@ -63,7 +63,7 @@ export const ModalClose = styled.span`
   display: inline-flex;
   background-color: transparent;
   border: 0;
-  color: ${colors.typo.primary};
+  color: ${palette.typo.primary};
   cursor: pointer;
 
   &:hover {

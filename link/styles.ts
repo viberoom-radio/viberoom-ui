@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from 'shared/styles/theme';
+import { palette } from 'shared/styles/theme';
 
 const linkBorderSize = '1px';
 
@@ -11,14 +11,14 @@ export const Link = styled.a`
   white-space: nowrap;
   text-overflow: ellipsis;
   text-decoration: none;
-  box-shadow: inset 0 -${linkBorderSize} 0 0 ${colors.typo.link};
+  box-shadow: inset 0 -${linkBorderSize} 0 0 ${palette.typo.link};
   transition: background-color 0.1s ease-out, border-radius 0.1s ease-out;
-  color: ${colors.typo.link};
+  color: ${palette.typo.link};
 
   &:link,
   &:visited,
   &:active {
-    color: ${colors.typo.link};
+    color: ${palette.typo.link};
   }
 
   &:focus {
@@ -27,9 +27,9 @@ export const Link = styled.a`
 
   &:focus,
   &:hover {
-    background-color: ${colors.typo.link};
-    color: ${colors.bg.default};
-    box-shadow: inset 0 -1 * ${linkBorderSize} 0 0 ${colors.typo.link};
+    background-color: ${palette.typo.link};
+    color: ${palette.bg.default};
+    box-shadow: inset 0 -1 * ${linkBorderSize} 0 0 ${palette.typo.link};
     border-radius: 2px;
   }
 `;

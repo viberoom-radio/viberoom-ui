@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { colors } from 'shared/styles/theme';
-import { typography } from 'shared/styles/theme';
+import { palette, typography } from 'shared/styles/theme';
 
 export const Input = styled.input`
   width: 100%;
   padding: 0.4rem 0.8rem;
-  background-color: ${colors.bg.secondary};
+  background-color: ${palette.bg.secondary};
   border: none;
   border-radius: 0.2rem;
-  color: ${colors.typo.secondary};
+  color: ${palette.typo.secondary};
   font-size: ${typography.fontSize};
   transition: color 0.1s, border-color 0.1s;
 
@@ -17,7 +16,7 @@ export const Input = styled.input`
   }
 
   &:focus {
-    color: ${colors.typo.primary};
-    outline: 2px solid ${colors.brand};
+    color: ${palette.typo.primary};
+    outline: 2px solid ${palette.brand};
   }
 `;

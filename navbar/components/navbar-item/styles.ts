@@ -1,4 +1,4 @@
-import { colors } from 'shared/styles/theme';
+import { palette } from 'shared/styles/theme';
 import styled, { css } from 'styled-components';
 import { StyledProps } from './types';
 
@@ -48,12 +48,12 @@ export const NavbarItem = styled.li`
 `;
 
 const activeStyles = css`
-  color: ${colors.typo.primary};
+  color: ${palette.typo.primary};
 
   &:link,
   &:active,
   &:visited {
-    color: ${colors.typo.primary};
+    color: ${palette.typo.primary};
   }
 `;
 
@@ -68,7 +68,7 @@ export const NavbarLink = styled.a<StyledProps>`
   background: transparent;
   border: 2px solid transparent;
   border-radius: 0.4rem;
-  color: ${colors.typo.secondary};
+  color: ${palette.typo.secondary};
   text-decoration: none;
   cursor: pointer;
   outline: none;
@@ -78,12 +78,12 @@ export const NavbarLink = styled.a<StyledProps>`
   &:link,
   &:active,
   &:visited {
-    color: ${colors.typo.secondary};
+    color: ${palette.typo.secondary};
   }
 
   &:focus,
   &:hover {
-    color: ${colors.typo.primary};
+    color: ${palette.typo.primary};
   }
 
   ${({ isActive }) => isActive && activeStyles}

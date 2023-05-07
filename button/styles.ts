@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'shared/styles/theme';
+import { palette } from 'shared/styles/theme';
 import { StyledProps } from './types';
 
 export const ButtonIcon = styled.span`
@@ -49,16 +49,16 @@ export const Button = styled.button<StyledProps>`
   border: none;
   border-radius: 0.2rem;
   justify-content: center;
-  color: ${colors.typo.primary};
-  background-color: ${({ $color }) => colors.bg[$color]};
+  color: ${palette.typo.primary};
+  background-color: ${({ $color }) => palette.bg[$color]};
   white-space: nowrap;
   cursor: pointer;
   box-shadow: ${({ $color }) =>
-    $color === 'transparent' ? 'none' : `0 4px 4px -4px ${colors.bg.default}`};
+    $color === 'transparent' ? 'none' : `0 4px 4px -4px ${palette.bg.default}`};
 
   &:link,
   &:hover {
-    color: ${colors.typo.primary};
+    color: ${palette.typo.primary};
     text-decoration: none;
   }
 
@@ -72,7 +72,7 @@ export const Button = styled.button<StyledProps>`
   }
 
   &:focus-visible {
-    outline: 2px solid ${colors.brand};
+    outline: 2px solid ${palette.brand};
   }
 
   ${({ isPlain }) => isPlain && plainStyles}

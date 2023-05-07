@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import { colors } from 'shared/styles/theme';
+import { palette } from 'shared/styles/theme';
 import { StyledProps } from './types';
 
 const shimmer = keyframes`
@@ -20,10 +20,10 @@ const loadingStyles = css`
     transform: translateX(-100%);
     background-image: linear-gradient(
       90deg,
-      ${colors.bg.default} 0,
+      ${palette.bg.default} 0,
       #142b46 20%,
       #265488 60%,
-      ${colors.bg.default}
+      ${palette.bg.default}
     );
     animation: ${shimmer} 2s infinite;
   }
