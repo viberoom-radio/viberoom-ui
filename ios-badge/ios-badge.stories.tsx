@@ -6,9 +6,6 @@ const meta: Meta<typeof IosBadge> = {
   title: 'Shared/IosBadge',
   component: IosBadge,
   tags: ['autodocs'],
-  args: {
-    name: 'Dweeb',
-  },
   render() {
     return <IosBadge />;
   },

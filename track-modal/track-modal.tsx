@@ -5,15 +5,21 @@ import { ShareTrack } from 'features/share-track';
 import { getTrackPageUrl } from 'shared/utils/track';
 import { Props } from './types';
 
-export const TrackModal = ({ track }: Props) => (
-  <>
-    <Track {...track} />
+export const TrackModal = ({ track }: Props) => {
+  if (!track) {
+    return <div>Loading...</div>;
+  }
 
-    <br />
+  return (
+    <>
+      <Track {...track} />
 
-    <Input defaultValue={getTrackPageUrl(track.artist.handle, track.id)} />
+      <br />
 
-    <hr />
-    <ShareTrack track={track} />
-  </>
-);
+      <Input defaultValue={getTrackPageUrl(track.artist.handle, track.id)} />
+
+      <hr />
+      <ShareTrack track={track} />
+    </>
+  );
+};
