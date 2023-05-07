@@ -1,4 +1,4 @@
-import { colors } from 'shared/constants/colors';
+import { colors } from 'shared/styles/theme';
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`

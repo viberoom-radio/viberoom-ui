@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from 'shared/constants/colors';
+import { colors } from 'shared/styles/theme';
 
 const linkBorderSize = '1px';
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors } from 'shared/constants/colors';
-import { typography } from 'shared/constants/typography';
+import { colors } from 'shared/styles/theme';
+import { typography } from 'shared/styles/theme';
 
 export const Input = styled.input`
   width: 100%;

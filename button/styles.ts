@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'shared/constants/colors';
+import { colors } from 'shared/styles/theme';
 import { StyledProps } from './types';
 
 export const ButtonIcon = styled.span`

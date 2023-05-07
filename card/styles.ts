@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'shared/constants/colors';
+import { colors } from 'shared/styles/theme';
 import { Props } from './types';
 
 const centeredStyles = css`
