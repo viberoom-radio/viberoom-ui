@@ -9,6 +9,9 @@ import { Howl } from 'howler';
 import { Track } from 'shared/types/track';
 import { PlayerContext } from 'entities/player';
 import { generateTrackURL, getNextTrackIndex, updateMetadata } from './utils';
+import { fetchHost } from 'shared/api/audius';
+import { fetchTracks } from 'shared/api/sanity';
+import { shuffle } from 'shared/utils/array';
 
 export const Player = () => {
   const {
@@ -17,7 +20,9 @@ export const Player = () => {
     currentTrackIndex,
     setCurrentTrackIndex,
     tracks,
+    setTracks,
     host,
+    setHost,
   } = useContext(PlayerContext);
   // const [currentTime, setCurrentTime] = useState(0);
   const track = tracks[currentTrackIndex];
@@ -26,6 +31,18 @@ export const Player = () => {
   let audioNext = useRef<Howl>(null);
   // Cache previous props value to ignore component render caused by HMR
   let wasPlaying = useRef(false);
+
+  const sendRequest = useCallback(async () => {
+    const randomHost = await fetchHost();
+    const tracksOrdered = await fetchTracks();
+    const tracksShuffled = shuffle(tracksOrdered);
+    setHost(randomHost);
+    setTracks(tracksShuffled);
+  }, [setHost, setTracks]);
+
+  useEffect(() => {
+    sendRequest();
+  }, [sendRequest]);
 
   const onLoaded = () => {
     const nextTrackIndex = getNextTrackIndex(currentTrackIndex, tracks.length);
