@@ -15,8 +15,6 @@ const meta: Meta<typeof RichText> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Image>;
+type Story = StoryObj<typeof RichText>;
 
 export const Default: Story = {};
-
-export const WithText: Story = {};

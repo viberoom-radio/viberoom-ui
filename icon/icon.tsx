@@ -1,10 +1,10 @@
 import React from 'react';
 import * as Icons from './components';
 import { Props } from './types';
-import { toCapitalCase } from './utils';
+import { kebabCaseToPascalCase } from './utils';
 
-export const Icon = ({ name, size, color }: Props) => {
-  const IconElement = Icon[toCapitalCase(name)];
+export const Icon = ({ name, size = 24, color }: Props) => {
+  const IconElement = Icon[kebabCaseToPascalCase(name)];
 
   return <IconElement size={size} color={color} />;
 };

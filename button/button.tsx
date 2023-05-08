@@ -6,7 +6,7 @@ import * as Styled from './styles';
 export const Button = ({
   children,
   icon,
-  iconSize,
+  iconSize = 24,
   href = '#',
   color = 'secondary',
   isDisabled = false,
