@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'shared/ui/button';
+import { Icon } from 'shared/ui/icon';
 import { ModalHeader } from './components/modal-header';
 import { ModalContent } from './components/modal-content';
 import * as Styled from './styles';
@@ -16,7 +17,7 @@ export const Modal = ({ isShown = false, close, children }) => {
       <Styled.Modal>
         <Styled.ModalClose>
           <Button
-            icon="x"
+            icon={<Icon name="X" />}
             onClick={close}
             color="transparent"
             ariaLabel="Close dialog"

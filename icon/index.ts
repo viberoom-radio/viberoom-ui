@@ -1,2 +1,3 @@
 export { Icon } from './icon';
-export { getIconNames } from './utils';
+export * as Icons from './components';
+export type { IconName } from './types';

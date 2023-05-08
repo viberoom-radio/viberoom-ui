@@ -1,19 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Icon, Icons } from 'shared/ui/icon';
 import { Button } from './button';
-import { getIconNames } from '../icon';
 
 const meta: Meta<typeof Button> = {
   title: 'Shared/Button',
   component: Button,
   tags: ['autodocs'],
-  argTypes: {
-    icon: {
-      options: getIconNames(),
-      control: {
-        type: 'select',
-      },
-    },
-  },
   args: {
     href: '#',
     color: 'primary',
@@ -23,7 +15,6 @@ const meta: Meta<typeof Button> = {
     isFluid: false,
     isFluidMobile: false,
     ariaLabel: 'button',
-    iconSize: 24,
   },
   render({ ...props }) {
     return <Button {...props} />;
@@ -53,6 +44,17 @@ export const Transparent: Story = {
 
 export const WithIcon: Story = {
   args: {
-    icon: 'coffee',
+    icon: <Icon name="AppleMusic" />,
+  },
+  argTypes: {
+    icon: {
+      options: Object.keys(Icons),
+      mapping: Object.fromEntries(
+        Object.entries(Icons).map(([name]) => [
+          name,
+          <Icon name={name as keyof typeof Icons} key={name} />,
+        ])
+      ),
+    },
   },
 };

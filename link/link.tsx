@@ -12,7 +12,7 @@ export const Link = ({ href, children }: Props) => {
     if (!isInternal) {
       return (
         <Styled.LinkIcon>
-          <Icon name="arrow-up-right" />
+          <Icon name="ArrowUpRight" />
         </Styled.LinkIcon>
       );
     }

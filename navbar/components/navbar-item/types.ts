@@ -1,7 +1,8 @@
+import { ReactElement } from 'react';
+
 export type Props = {
   href?: string;
-  icon: string;
-  iconSize?: number;
+  icon: ReactElement;
   text: string;
   isActive?: boolean;
 };

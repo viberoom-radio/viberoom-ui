@@ -6,7 +6,6 @@ import * as Styled from './styles';
 export const Button = ({
   children,
   icon,
-  iconSize = 24,
   href = '#',
   color = 'secondary',
   isDisabled = false,
@@ -27,11 +26,7 @@ export const Button = ({
 
   const renderChildren = () => (
     <>
-      {icon && (
-        <Styled.ButtonIcon>
-          <Icon name={icon} size={iconSize} />
-        </Styled.ButtonIcon>
-      )}
+      {icon && <Styled.ButtonIcon>{icon}</Styled.ButtonIcon>}
       {children && <Styled.ButtonText>{children}</Styled.ButtonText>}
     </>
   );
@@ -80,7 +75,7 @@ export const Button = ({
         {renderChildren()}
 
         <Styled.ButtonIconRight>
-          <Icon name="arrow-up-right" />
+          <Icon name="ArrowUpRight" />
         </Styled.ButtonIconRight>
       </Styled.ButtonLink>
     );

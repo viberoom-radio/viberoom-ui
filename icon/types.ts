@@ -1,5 +1,9 @@
+import * as Icons from './components';
+
+export type IconName = keyof typeof Icons;
+
 export type Props = {
-  name: string;
+  name: IconName;
   size?: number;
   color?: string;
 };

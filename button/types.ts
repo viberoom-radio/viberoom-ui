@@ -1,10 +1,9 @@
-import { PropsWithChildren, SyntheticEvent } from 'react';
+import { PropsWithChildren, ReactElement, SyntheticEvent } from 'react';
 
 type ButtonColor = 'primary' | 'secondary' | 'transparent';
 
 export type Props = PropsWithChildren<{
-  icon?: string;
-  iconSize?: number;
+  icon?: ReactElement;
   href?: string;
   color?: ButtonColor;
   isDisabled?: boolean;
