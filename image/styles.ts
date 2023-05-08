@@ -46,7 +46,7 @@ const squareStyles = css`
 `;
 
 const roundStyles = css`
-  border-radius: 10rem;
+  border-radius: 100%;
 `;
 
 export const Image = styled.div<StyledProps>`

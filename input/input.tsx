@@ -1,17 +1,11 @@
-import React, { FocusEvent } from 'react';
+import React, { FocusEvent, MouseEvent } from 'react';
 import * as Styled from './styles';
+import { Props } from './types';
 
-export const Input = (props) => {
+export const Input = ({ defaultValue = '' }: Props) => {
   const onFocus = (event: FocusEvent<HTMLInputElement>) => {
     event.target.select();
   };
 
-  return (
-    <Styled.Input
-      onClick={onFocus}
-      onFocus={onFocus}
-      ref={props.ref}
-      {...props}
-    />
-  );
+  return <Styled.Input defaultValue={defaultValue} onFocus={onFocus} />;
 };

@@ -10,6 +10,7 @@ export const CardHeading = styled.header`
 `;
 
 export const CardTitle = styled.h2`
+  width: 100%;
   margin: 0;
   font-size: 1.6rem;
 

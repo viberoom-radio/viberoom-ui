@@ -6,6 +6,9 @@ const meta: Meta<typeof Input> = {
   title: 'Shared/Input',
   component: Input,
   tags: ['autodocs'],
+  args: {
+    defaultValue: '',
+  },
   render({ ...props }) {
     return <Input {...props} />;
   },

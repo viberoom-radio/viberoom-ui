@@ -10,6 +10,8 @@ const meta: Meta<typeof Card> = {
   component: Card,
   tags: ['autodocs'],
   args: {
+    align: 'left',
+    isPrimary: false,
     children: (
       <Card.Body>
         <p>{longText}</p>
