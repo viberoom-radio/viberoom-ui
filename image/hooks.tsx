@@ -48,7 +48,7 @@ export const useLazyLoad = (
         observer.unobserve(image);
       }
     };
-  }, [imageRef]);
+  }, [imageRef, placeholder]);
 
   return { isLoaded };
 };
