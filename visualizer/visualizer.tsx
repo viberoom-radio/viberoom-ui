@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { PlayerContext } from 'entities/player';
 import { environmentConfig, icosahedronConfig } from './constants';
 import { convertConfigToString } from './utils';

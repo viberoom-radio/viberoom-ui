@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRouter } from 'next/router';
 import { Icon } from 'shared/ui/icon';
 import { NavbarItem } from './components/navbar-item';

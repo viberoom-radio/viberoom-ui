@@ -1,4 +1,3 @@
-import React from 'react';
 import { SvgProps } from '../../types';
 
 export const GlobeIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (

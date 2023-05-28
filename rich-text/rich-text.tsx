@@ -1,4 +1,3 @@
-import React from 'react';
 import { PortableText } from '@portabletext/react';
 import { Link } from 'shared/ui/link';
 import { Quote } from 'shared/ui/quote';

@@ -1,9 +1,9 @@
+import { useRef } from 'react';
 import * as Sentry from '@sentry/browser';
 import { PLACEHOLDER } from './config';
 import { Props } from './types';
 import * as Styled from './styles';
 import { useLazyLoad } from './hooks';
-import { useRef } from 'react';
 
 export const Image = ({
   src,

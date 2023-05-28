@@ -1,4 +1,3 @@
-import React from 'react';
 import { GridCell } from './components/grid-cell/grid-cell';
 import { Props } from './types';
 import * as Styled from './styles';

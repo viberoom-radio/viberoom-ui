@@ -1,4 +1,3 @@
-import React from 'react';
 import { CardLink } from './components/card-link';
 import { CardHeading } from './components/card-heading';
 import { CardDescription } from './components/card-description';

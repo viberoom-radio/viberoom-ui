@@ -1,4 +1,3 @@
-import React from 'react';
 import NextLink from 'next/link';
 import { Props } from './types';
 import * as Styled from './styles';

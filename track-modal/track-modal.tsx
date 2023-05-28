@@ -1,4 +1,3 @@
-import React from 'react';
 import { Track } from 'entities/track/ui/track';
 import { Input } from 'shared/ui/input';
 import { ShareTrack } from 'features/share-track';

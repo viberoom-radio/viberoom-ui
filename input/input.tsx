@@ -1,4 +1,4 @@
-import React, { FocusEvent, MouseEvent } from 'react';
+import { FocusEvent } from 'react';
 import * as Styled from './styles';
 import { Props } from './types';
 

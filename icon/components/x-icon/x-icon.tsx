@@ -1,4 +1,3 @@
-import React from 'react';
 import { SvgProps } from '../../types';
 
 export const XIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
