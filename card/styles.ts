@@ -8,6 +8,7 @@ const centeredStyles = css`
 
 const primaryStyles = css`
   background-color: ${palette.bg.secondary};
+  border: none;
 `;
 
 export const Card = styled.div<Props>`
@@ -17,10 +18,12 @@ export const Card = styled.div<Props>`
   flex-direction: column;
   height: 100%;
   background: ${palette.bg.border};
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid ${palette.bg.secondary};
 
   @media only screen and (max-width: 768px) {
     background: transparent;
+    border: none;
   }
 
   ${({ align }) => align === 'center' && centeredStyles};
