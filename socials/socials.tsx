@@ -5,7 +5,7 @@ import { Props } from './types';
 
 export const Socials = ({ socials }: Props) => (
   <ButtonGroup>
-    {socials.bandcamp_url && (
+    {socials?.bandcamp_url && (
       <Button
         icon={<Icon name="Bandcamp" />}
         href={socials.bandcamp_url}
@@ -14,7 +14,7 @@ export const Socials = ({ socials }: Props) => (
         Bandcamp
       </Button>
     )}
-    {socials.spotify_url && (
+    {socials?.spotify_url && (
       <Button
         icon={<Icon name="SpotifyFilled" />}
         href={socials.spotify_url}
@@ -23,7 +23,7 @@ export const Socials = ({ socials }: Props) => (
         Spotify
       </Button>
     )}
-    {socials.instagram_url && (
+    {socials?.instagram_url && (
       <Button
         icon={<Icon name="Instagram" />}
         href={socials.instagram_url}
@@ -32,7 +32,7 @@ export const Socials = ({ socials }: Props) => (
         Instagram
       </Button>
     )}
-    {socials.soundcloud_url && (
+    {socials?.soundcloud_url && (
       <Button
         icon={<Icon name="Soundcloud" />}
         href={socials.soundcloud_url}
@@ -41,7 +41,7 @@ export const Socials = ({ socials }: Props) => (
         SoundCloud
       </Button>
     )}
-    {socials.audius_url && (
+    {socials?.audius_url && (
       <Button
         icon={<Icon name="Audius" />}
         href={socials.audius_url}
@@ -50,7 +50,7 @@ export const Socials = ({ socials }: Props) => (
         Audius
       </Button>
     )}
-    {socials.mixcloud_url && (
+    {socials?.mixcloud_url && (
       <Button
         icon={<Icon name="Mixcloud" />}
         href={socials.mixcloud_url}
