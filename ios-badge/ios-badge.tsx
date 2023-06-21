@@ -1,5 +1,5 @@
+import { IOS_APP_URL } from 'shared/constants';
 import { Button } from 'shared/ui/button';
-import { IOS_APP_URL } from './constants';
 import { IosBadgetIcon } from './components';
 
 export const IosBadge = () => (
