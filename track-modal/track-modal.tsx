@@ -23,7 +23,7 @@ export const TrackModal = ({ track }: Props) => {
       <br />
 
       <Input
-        defaultValue={getTrackPageUrl(track.artist.handle, track.id)}
+        defaultValue={getTrackPageUrl(track.artist.slug, track.id)}
         onCopy={handleCopy}
       />
 
