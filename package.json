@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/viberoom-radio/viberoom-ui/issues"
   },
-  "homepage": "https://github.com/viberoom-radio/viberoom-ui#readme"
+  "homepage": "https://github.com/viberoom-radio/viberoom-ui#readme",
+  "devDependencies": {
+    "typescript": "4.8.4"
+  }
 }
