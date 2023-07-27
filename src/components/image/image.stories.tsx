@@ -15,7 +15,6 @@ const meta: Meta<typeof Image> = {
     placeholder: PLACEHOLDER,
   },
   render({ ...props }) {
-    // eslint-disable-next-line jsx-a11y/alt-text
     return <Image {...props} />;
   },
 };

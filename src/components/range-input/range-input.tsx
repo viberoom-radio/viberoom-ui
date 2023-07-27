@@ -18,3 +18,5 @@ export const RangeInput = forwardRef(
     />
   )
 );
+
+RangeInput.displayName = "RangeInput";

@@ -9,7 +9,8 @@
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint ./src/**/*.{ts,tsx}"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,13 @@
     "@storybook/react-webpack5": "^7.1.0",
     "@storybook/testing-library": "^0.2.0",
     "@types/react": "18.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.45.0",
+    "eslint-config-standard-with-typescript": "^37.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.0",
     "next": "13.4.12",
     "postcss": "8.4.27",
     "react": "18.2.0",
@@ -49,7 +57,7 @@
     "rollup-plugin-typescript2": "0.35.0",
     "storybook": "^7.1.0",
     "styled-components": "6.0.5",
-    "typescript": "4.8.4"
+    "typescript": "^5.1.6"
   },
   "peerDependencies": {
     "next": "^13.0.0",

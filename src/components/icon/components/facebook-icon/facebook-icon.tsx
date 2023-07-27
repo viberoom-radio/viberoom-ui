@@ -1,4 +1,9 @@
-export const FacebookIcon = ({ color = 'currentColor', size = 24 }) => (
+import { SvgProps } from "components/icon/types";
+
+export const FacebookIcon = ({
+  color = "currentColor",
+  size = 24,
+}: SvgProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

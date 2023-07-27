@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { WithControlledState } from "../../lib/storybook";
 import { RangeInput } from "./range-input";
-import { Props } from "./types";
 
 const meta: Meta<typeof RangeInput> = {
   title: "Components/RangeInput",
