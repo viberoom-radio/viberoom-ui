@@ -1,26 +1,26 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { Input } from "./input";
+import { Input } from './input'
 
 const meta: Meta<typeof Input> = {
-  title: "Components/Input",
+  title: 'Components/Input',
   component: Input,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   args: {
-    defaultValue: "",
+    defaultValue: '',
   },
   render({ ...props }) {
-    return <Input {...props} />;
+    return <Input {...props} />
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Input>;
+export default meta
+type Story = StoryObj<typeof Input>
 
-export const Default: Story = {};
+export const Default: Story = {}
 
 export const Filled: Story = {
   args: {
-    defaultValue: "Value",
+    defaultValue: 'Value',
   },
-};
+}

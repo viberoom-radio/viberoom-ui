@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { palette } from "../../styles/theme";
-import { StyledProps } from "./types";
+import styled, { css } from 'styled-components'
+import { palette } from '../../styles/theme'
+import { StyledProps } from './types'
 
 export const ArtistUserpic = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const ArtistUserpic = styled.div`
   width: 50px;
   height: 50px;
   box-shadow: 0 4px 4px -4px ${palette.bg.default};
-`;
+`
 
 const smallStyles = css`
   ${ArtistUserpic} {
@@ -17,7 +17,7 @@ const smallStyles = css`
     height: 24px;
     margin-right: 0.5rem;
   }
-`;
+`
 
 export const Artist = styled.div<StyledProps>`
   display: flex;
@@ -28,8 +28,8 @@ export const Artist = styled.div<StyledProps>`
   user-select: none;
   transition: all 0.2s;
 
-  ${({ size }) => size === "small" && smallStyles}
-`;
+  ${({ size }) => size === 'small' && smallStyles}
+`
 
 export const ArtistInfo = styled.ul`
   overflow: hidden;
@@ -39,11 +39,11 @@ export const ArtistInfo = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-`;
+`
 
 export const ArtistName = styled.li`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 1rem;
-`;
+`

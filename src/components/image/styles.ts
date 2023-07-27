@@ -1,16 +1,16 @@
-import styled, { css, keyframes } from "styled-components";
-import { palette } from "../../styles/theme";
-import { StyledProps } from "./types";
+import styled, { css, keyframes } from 'styled-components'
+import { palette } from '../../styles/theme'
+import { StyledProps } from './types'
 
 const shimmer = keyframes`
   100% {
     transform: translateX(100%);
   }
-`;
+`
 
 const loadingStyles = css`
   &::before {
-    content: " ";
+    content: ' ';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -27,11 +27,11 @@ const loadingStyles = css`
     );
     animation: ${shimmer} 2s infinite;
   }
-`;
+`
 
 const squareStyles = css`
   &:after {
-    content: " ";
+    content: ' ';
     display: block;
     padding-bottom: 100%;
   }
@@ -43,11 +43,11 @@ const squareStyles = css`
     left: 0;
     bottom: 0;
   }
-`;
+`
 
 const roundStyles = css`
   border-radius: 100%;
-`;
+`
 
 export const Image = styled.div<StyledProps>`
   overflow: hidden;
@@ -68,4 +68,4 @@ export const Image = styled.div<StyledProps>`
     width: 100%;
     height: 100%;
   }
-`;
+`

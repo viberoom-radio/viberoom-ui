@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { palette, typography } from "../../styles/theme";
+import styled from 'styled-components'
+import { palette, typography } from '../../styles/theme'
 
 export const Input = styled.input`
   width: 100%;
@@ -9,7 +9,9 @@ export const Input = styled.input`
   border-radius: 0.2rem;
   color: ${palette.typo.secondary};
   font-size: ${typography.fontSize};
-  transition: color 0.1s, border-color 0.1s;
+  transition:
+    color 0.1s,
+    border-color 0.1s;
 
   &:hover {
     opacity: 0.8;
@@ -19,4 +21,4 @@ export const Input = styled.input`
     color: ${palette.typo.primary};
     outline: 2px solid ${palette.brand};
   }
-`;
+`

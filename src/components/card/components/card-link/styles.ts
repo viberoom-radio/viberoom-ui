@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CardLink = styled.a`
   &:focus {
@@ -9,4 +9,4 @@ export const CardLink = styled.a`
   &:hover {
     opacity: 0.8;
   }
-`;
+`

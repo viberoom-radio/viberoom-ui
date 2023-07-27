@@ -1,1 +1,1 @@
-export { IosBadge } from './ios-badge';
+export { IosBadge } from './ios-badge'

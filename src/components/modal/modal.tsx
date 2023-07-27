@@ -1,13 +1,13 @@
-import { Button } from "../button";
-import { Icon } from "../icon";
-import { ModalHeader } from "./components/modal-header";
-import { ModalContent } from "./components/modal-content";
-import * as Styled from "./styles";
-import { Props } from "./types";
+import { Button } from '../button'
+import { Icon } from '../icon'
+import { ModalHeader } from './components/modal-header'
+import { ModalContent } from './components/modal-content'
+import * as Styled from './styles'
+import { Props } from './types'
 
 export const Modal = ({ isShown = false, close, children }: Props) => {
   if (!isShown) {
-    return null;
+    return null
   }
 
   return (
@@ -27,8 +27,8 @@ export const Modal = ({ isShown = false, close, children }: Props) => {
         {children}
       </Styled.Modal>
     </>
-  );
-};
+  )
+}
 
-Modal.Header = ModalHeader;
-Modal.Content = ModalContent;
+Modal.Header = ModalHeader
+Modal.Content = ModalContent

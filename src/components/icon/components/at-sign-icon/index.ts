@@ -1,1 +1,1 @@
-export { AtSignIcon } from './at-sign-icon';
+export { AtSignIcon } from './at-sign-icon'

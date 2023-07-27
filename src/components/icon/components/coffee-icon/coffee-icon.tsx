@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types';
+import { SvgProps } from '../../types'
 
 export const CoffeeIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
   <svg
@@ -18,4 +18,4 @@ export const CoffeeIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
     <line x1="10" y1="1" x2="10" y2="4" />
     <line x1="14" y1="1" x2="14" y2="4" />
   </svg>
-);
+)

@@ -1,1 +1,1 @@
-export { ShareIcon } from './share-icon';
+export { ShareIcon } from './share-icon'

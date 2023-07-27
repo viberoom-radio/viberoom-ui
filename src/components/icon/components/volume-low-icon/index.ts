@@ -1,1 +1,1 @@
-export { VolumeLowIcon } from './volume-low-icon';
+export { VolumeLowIcon } from './volume-low-icon'

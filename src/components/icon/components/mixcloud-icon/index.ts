@@ -1,1 +1,1 @@
-export { MixcloudIcon } from './mixcloud-icon';
+export { MixcloudIcon } from './mixcloud-icon'

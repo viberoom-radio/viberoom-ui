@@ -1,1 +1,1 @@
-export { BandcampIcon } from './bandcamp-icon';
+export { BandcampIcon } from './bandcamp-icon'

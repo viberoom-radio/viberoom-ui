@@ -1,5 +1,5 @@
-import { Props } from './types';
-import * as Styled from './styles';
+import { Props } from './types'
+import * as Styled from './styles'
 
 export const ButtonGroup = ({ children, isStacked = false }: Props) => (
   <Styled.ButtonGroup isStacked={isStacked}>
@@ -9,4 +9,4 @@ export const ButtonGroup = ({ children, isStacked = false }: Props) => (
         <Styled.ButtonGroupItem key={index}>{node}</Styled.ButtonGroupItem>
       ))}
   </Styled.ButtonGroup>
-);
+)

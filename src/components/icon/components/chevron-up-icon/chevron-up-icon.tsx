@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types';
+import { SvgProps } from '../../types'
 
 export const ChevronUpIcon = ({
   color = 'currentColor',
@@ -17,4 +17,4 @@ export const ChevronUpIcon = ({
   >
     <polyline points="18 15 12 9 6 15" />
   </svg>
-);
+)

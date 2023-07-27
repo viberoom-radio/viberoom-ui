@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types';
+import { SvgProps } from '../../types'
 
 export const VolumeNoneIcon = ({
   color = 'currentColor',
@@ -18,4 +18,4 @@ export const VolumeNoneIcon = ({
     <path d="M10 13H7V19H10L15 23V9L10 13Z" />
     <path d="M19 13.5L24 18.5M24 13.5L19 18.5" />
   </svg>
-);
+)

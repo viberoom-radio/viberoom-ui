@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
-import { Props } from './types';
+import styled, { css } from 'styled-components'
+import { Props } from './types'
 
 const stackedStyles = css`
   flex-direction: column;
-`;
+`
 
 export const ButtonGroup = styled.ul<Props>`
   display: flex;
@@ -23,8 +23,8 @@ export const ButtonGroup = styled.ul<Props>`
   @media only screen and (max-width: 768px) {
     ${stackedStyles}
   }
-`;
+`
 
 export const ButtonGroupItem = styled.li`
   margin: 0.5rem;
-`;
+`

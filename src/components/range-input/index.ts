@@ -1,1 +1,1 @@
-export { RangeInput } from './range-input';
+export { RangeInput } from './range-input'

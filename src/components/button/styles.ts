@@ -1,14 +1,14 @@
-import styled, { css } from "styled-components";
-import { palette } from "../../styles/theme";
-import { StyledProps } from "./types";
+import styled, { css } from 'styled-components'
+import { palette } from '../../styles/theme'
+import { StyledProps } from './types'
 
 export const ButtonIcon = styled.span`
   display: inline-flex;
-`;
+`
 
 export const ButtonIconRight = styled(ButtonIcon)`
   opacity: 0.4;
-`;
+`
 
 const fluidStyles = css`
   position: relative;
@@ -26,17 +26,17 @@ const fluidStyles = css`
     left: auto;
     right: 0.4rem;
   }
-`;
+`
 
 const plainStyles = css`
   height: auto;
   padding: 0;
-`;
+`
 
 const disabledStyles = css`
   pointer-events: none;
   opacity: 0.4;
-`;
+`
 
 export const Button = styled.button<StyledProps>`
   position: static;
@@ -54,7 +54,7 @@ export const Button = styled.button<StyledProps>`
   white-space: nowrap;
   cursor: pointer;
   box-shadow: ${({ $color }) =>
-    $color === "transparent" ? "none" : `0 4px 4px -4px ${palette.bg.default}`};
+    $color === 'transparent' ? 'none' : `0 4px 4px -4px ${palette.bg.default}`};
 
   &:link,
   &:hover {
@@ -84,11 +84,11 @@ export const Button = styled.button<StyledProps>`
   @media only screen and (max-width: 768px) {
     ${({ isFluidMobile }) => isFluidMobile && fluidStyles}
   }
-`;
+`
 
 export const ButtonText = styled.span`
   padding: 0 0.8rem;
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.7;
-`;
+`

@@ -1,1 +1,1 @@
-export { Artist } from './artist';
+export { Artist } from './artist'

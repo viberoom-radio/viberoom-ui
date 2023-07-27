@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { palette } from "../../styles/theme";
+import styled, { keyframes } from 'styled-components'
+import { palette } from '../../styles/theme'
 
 const fadeIn = keyframes`
   from {
@@ -9,7 +9,7 @@ const fadeIn = keyframes`
   to {
     opacity: 1;
   }
-`;
+`
 
 const slideUp = keyframes`
   from {
@@ -21,7 +21,7 @@ const slideUp = keyframes`
     transform: translate(-50%, -110%);
     opacity: 1;
   }
-`;
+`
 
 export const Modal = styled.div`
   position: fixed;
@@ -43,7 +43,7 @@ export const Modal = styled.div`
     padding: 1rem 1rem 2rem 1rem;
     animation: ${slideUp} 0.3s;
   }
-`;
+`
 
 export const ModalBackdrop = styled.div`
   position: fixed;
@@ -54,7 +54,7 @@ export const ModalBackdrop = styled.div`
   background: ${palette.bg.tone};
   z-index: 30;
   animation: ${fadeIn} 0.3s;
-`;
+`
 
 export const ModalClose = styled.span`
   position: absolute;
@@ -73,4 +73,4 @@ export const ModalClose = styled.span`
   &:focus {
     outline: none;
   }
-`;
+`

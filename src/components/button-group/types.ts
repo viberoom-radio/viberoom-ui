@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 export type Props = {
-  children: ReactNode[];
-  isStacked?: boolean;
-};
+  children: ReactNode[]
+  isStacked?: boolean
+}

@@ -1,8 +1,8 @@
-import { useRef } from "react";
-import { PLACEHOLDER } from "./config";
-import { Props } from "./types";
-import * as Styled from "./styles";
-import { useLazyLoad } from "./hooks";
+import { useRef } from 'react'
+import { PLACEHOLDER } from './config'
+import { Props } from './types'
+import * as Styled from './styles'
+import { useLazyLoad } from './hooks'
 
 export const Image = ({
   src,
@@ -12,19 +12,19 @@ export const Image = ({
   isRound = false,
   placeholder = PLACEHOLDER,
 }: Props) => {
-  const imageRef = useRef<HTMLImageElement>(null);
-  const { isLoaded } = useLazyLoad(imageRef, placeholder);
+  const imageRef = useRef<HTMLImageElement>(null)
+  const { isLoaded } = useLazyLoad(imageRef, placeholder)
 
   const handleError = () => {
     if (imageRef.current) {
-      imageRef.current.src = placeholder;
+      imageRef.current.src = placeholder
     }
     /**
      * @todo pass error handler that fires a Sentry exception:
      * `Sentry.captureException(new Error(`image_load_error: "${alt}"`));`
      */
-    onError?.();
-  };
+    onError?.()
+  }
 
   return (
     <Styled.Image isLoading={!isLoaded} isSquare={isSquare} isRound={isRound}>
@@ -36,5 +36,5 @@ export const Image = ({
         onError={handleError}
       />
     </Styled.Image>
-  );
-};
+  )
+}

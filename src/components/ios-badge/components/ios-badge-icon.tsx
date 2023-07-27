@@ -53,4 +53,4 @@ export const IosBadgetIcon = () => (
       </g>
     </g>
   </svg>
-);
+)

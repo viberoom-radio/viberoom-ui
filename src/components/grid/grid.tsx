@@ -1,6 +1,6 @@
-import { GridCell } from './components/grid-cell/grid-cell';
-import { Props } from './types';
-import * as Styled from './styles';
+import { GridCell } from './components/grid-cell/grid-cell'
+import { Props } from './types'
+import * as Styled from './styles'
 
 export const Grid = ({
   columns = 4,
@@ -15,6 +15,6 @@ export const Grid = ({
   >
     {children}
   </Styled.Grid>
-);
+)
 
-Grid.Cell = GridCell;
+Grid.Cell = GridCell

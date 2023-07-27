@@ -17,4 +17,4 @@ export const palette = {
     tone: 'rgba(0, 0, 0, 0.9);',
   },
   brand: '#0468ff',
-};
+}

@@ -1,7 +1,7 @@
-import { Button } from "../button";
-import { ButtonGroup } from "../button-group";
-import { Icon } from "../icon";
-import { Props } from "./types";
+import { Button } from '../button'
+import { ButtonGroup } from '../button-group'
+import { Icon } from '../icon'
+import { Props } from './types'
 
 export const Socials = ({
   audiusUrl,
@@ -55,4 +55,4 @@ export const Socials = ({
       </Button>
     )}
   </ButtonGroup>
-);
+)

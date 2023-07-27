@@ -1,7 +1,7 @@
-import { PortableTextProps } from "@portabletext/react";
+import { PortableTextProps } from '@portabletext/react'
 
 export type Props = {
-  value: PortableTextProps["value"];
-};
+  value: PortableTextProps['value']
+}
 
-export type Components = PortableTextProps["components"];
+export type Components = PortableTextProps['components']

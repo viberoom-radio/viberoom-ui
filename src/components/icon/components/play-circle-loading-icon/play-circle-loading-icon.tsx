@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types';
+import { SvgProps } from '../../types'
 
 export const PlayCircleLoadingIcon = ({
   color = 'currentColor',
@@ -45,4 +45,4 @@ export const PlayCircleLoadingIcon = ({
       />
     </path>
   </svg>
-);
+)

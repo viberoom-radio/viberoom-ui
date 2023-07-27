@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react'
 
 export type Props = PropsWithChildren<{
-  align?: 'left' | 'center';
-  isPrimary?: boolean;
-}>;
+  align?: 'left' | 'center'
+  isPrimary?: boolean
+}>

@@ -1,11 +1,11 @@
-import NextLink from "next/link";
-import { Icon } from "../icon";
-import { Props } from "./types";
-import * as Styled from "./styles";
+import NextLink from 'next/link'
+import { Icon } from '../icon'
+import { Props } from './types'
+import * as Styled from './styles'
 
 export const Link = ({ href, children }: Props) => {
-  const isWithChildren = Boolean(children);
-  const isInternal = href && href[0] === "/";
+  const isWithChildren = Boolean(children)
+  const isInternal = href && href[0] === '/'
 
   const renderIcon = () => {
     if (!isInternal) {
@@ -13,14 +13,14 @@ export const Link = ({ href, children }: Props) => {
         <Styled.LinkIcon>
           <Icon name="ArrowUpRight" />
         </Styled.LinkIcon>
-      );
+      )
     }
 
-    return null;
-  };
+    return null
+  }
 
   if (!isWithChildren) {
-    return null;
+    return null
   }
 
   if (isInternal) {
@@ -31,7 +31,7 @@ export const Link = ({ href, children }: Props) => {
           {renderIcon()}
         </Styled.Link>
       </NextLink>
-    );
+    )
   }
 
   return (
@@ -39,5 +39,5 @@ export const Link = ({ href, children }: Props) => {
       {children}
       {renderIcon()}
     </Styled.Link>
-  );
-};
+  )
+}

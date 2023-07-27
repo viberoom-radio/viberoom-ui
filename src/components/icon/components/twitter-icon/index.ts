@@ -1,1 +1,1 @@
-export { TwitterIcon } from './twitter-icon';
+export { TwitterIcon } from './twitter-icon'

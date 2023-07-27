@@ -1,1 +1,1 @@
-export { WithControlledState } from "./with-controlled-state";
+export { WithControlledState } from './with-controlled-state'

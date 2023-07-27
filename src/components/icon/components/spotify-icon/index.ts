@@ -1,1 +1,1 @@
-export { SpotifyIcon } from './spotify-icon';
+export { SpotifyIcon } from './spotify-icon'

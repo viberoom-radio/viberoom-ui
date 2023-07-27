@@ -1,1 +1,1 @@
-export { PlayCircleLoadingIcon } from './play-circle-loading-icon';
+export { PlayCircleLoadingIcon } from './play-circle-loading-icon'

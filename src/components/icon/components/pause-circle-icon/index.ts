@@ -1,1 +1,1 @@
-export { PauseCircleIcon } from './pause-circle-icon';
+export { PauseCircleIcon } from './pause-circle-icon'

@@ -1,1 +1,1 @@
-export { AppleMusicIcon } from './apple-music-icon';
+export { AppleMusicIcon } from './apple-music-icon'

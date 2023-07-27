@@ -1,15 +1,15 @@
-import styled, { css } from "styled-components";
-import { palette } from "../../styles/theme";
-import { Props } from "./types";
+import styled, { css } from 'styled-components'
+import { palette } from '../../styles/theme'
+import { Props } from './types'
 
 const centeredStyles = css`
   text-align: center;
-`;
+`
 
 const primaryStyles = css`
   background-color: ${palette.bg.secondary};
   border: none;
-`;
+`
 
 export const Card = styled.div<Props>`
   overflow: hidden;
@@ -26,7 +26,7 @@ export const Card = styled.div<Props>`
     border: none;
   }
 
-  ${({ align }) => align === "center" && centeredStyles};
+  ${({ align }) => align === 'center' && centeredStyles};
 
   ${({ isPrimary }) => isPrimary && primaryStyles};
-`;
+`
