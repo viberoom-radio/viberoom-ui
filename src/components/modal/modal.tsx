@@ -1,10 +1,11 @@
-import { Button } from 'shared/ui/button';
-import { Icon } from 'shared/ui/icon';
-import { ModalHeader } from './components/modal-header';
-import { ModalContent } from './components/modal-content';
-import * as Styled from './styles';
+import { Button } from "../button";
+import { Icon } from "../icon";
+import { ModalHeader } from "./components/modal-header";
+import { ModalContent } from "./components/modal-content";
+import * as Styled from "./styles";
+import { Props } from "./types";
 
-export const Modal = ({ isShown = false, close, children }) => {
+export const Modal = ({ isShown = false, close, children }: Props) => {
   if (!isShown) {
     return null;
   }

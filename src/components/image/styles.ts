@@ -1,6 +1,6 @@
-import styled, { css, keyframes } from 'styled-components';
-import { palette } from 'shared/styles/theme';
-import { StyledProps } from './types';
+import styled, { css, keyframes } from "styled-components";
+import { palette } from "../../shared/styles/theme";
+import { StyledProps } from "./types";
 
 const shimmer = keyframes`
   100% {
@@ -10,7 +10,7 @@ const shimmer = keyframes`
 
 const loadingStyles = css`
   &::before {
-    content: ' ';
+    content: " ";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -31,7 +31,7 @@ const loadingStyles = css`
 
 const squareStyles = css`
   &:after {
-    content: ' ';
+    content: " ";
     display: block;
     padding-bottom: 100%;
   }

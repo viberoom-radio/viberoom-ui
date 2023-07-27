@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { artistImage } from './__mocks__/constants';
+import type { Meta, StoryObj } from "@storybook/react";
+import { artistImage } from "./__mocks__/artist-image";
 
-import { Artist } from './artist';
+import { Artist } from "./artist";
 
 const meta: Meta<typeof Artist> = {
-  title: 'Shared/Artist',
+  title: "Components/Artist",
   component: Artist,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    name: 'Dweeb',
+    name: "Dweeb",
     userpic: artistImage,
   },
   render({ ...props }) {
@@ -23,6 +23,6 @@ export const Default: Story = {};
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: "small",
   },
 };

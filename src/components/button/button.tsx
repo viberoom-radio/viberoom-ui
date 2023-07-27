@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import { Icon } from 'shared/ui/icon';
-import { Props } from './types';
-import * as Styled from './styles';
+import Link from "next/link";
+import { Icon } from "../icon";
+import { Props } from "./types";
+import * as Styled from "./styles";
 
 export const Button = ({
   children,
   icon,
-  href = '#',
-  color = 'secondary',
+  href = "#",
+  color = "secondary",
   isDisabled = false,
   isPlain = false,
   isFluid = false,
@@ -21,8 +21,8 @@ export const Button = ({
   onMouseLeave,
   ariaLabel,
 }: Props) => {
-  const isActionButton = href === '#';
-  const isExternal = href && href !== '#' && href[0] !== '/';
+  const isActionButton = href === "#";
+  const isExternal = href && href !== "#" && href[0] !== "/";
 
   const renderChildren = () => (
     <>
@@ -55,7 +55,8 @@ export const Button = ({
 
   if (isExternal) {
     return (
-      <Styled.ButtonLink
+      <Styled.Button
+        as="a"
         $color={color}
         isDisabled={isDisabled}
         isPlain={isPlain}
@@ -77,13 +78,14 @@ export const Button = ({
         <Styled.ButtonIconRight>
           <Icon name="ArrowUpRight" />
         </Styled.ButtonIconRight>
-      </Styled.ButtonLink>
+      </Styled.Button>
     );
   }
 
   return (
     <Link href={href}>
-      <Styled.ButtonLink
+      <Styled.Button
+        as="a"
         $color={color}
         isDisabled={isDisabled}
         isPlain={isPlain}
@@ -91,7 +93,7 @@ export const Button = ({
         isFluidMobile={isFluidMobile}
       >
         {renderChildren()}
-      </Styled.ButtonLink>
+      </Styled.Button>
     </Link>
   );
 };

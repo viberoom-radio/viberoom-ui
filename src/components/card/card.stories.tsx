@@ -1,16 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../button';
-import { ButtonGroup } from '../button-group';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "../button";
 
-import { Card } from './card';
-import { heading, longText } from './__mocks__/constants';
+import { Card } from "./card";
+import { heading, longText } from "./__mocks__/constants";
 
 const meta: Meta<typeof Card> = {
-  title: 'Shared/Card',
+  title: "Components/Card",
   component: Card,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    align: 'left',
+    align: "left",
     isPrimary: false,
     children: (
       <Card.Body>
@@ -36,7 +35,7 @@ export const Primary: Story = {
 
 export const Centered: Story = {
   args: {
-    align: 'center',
+    align: "center",
   },
 };
 

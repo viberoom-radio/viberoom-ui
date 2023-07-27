@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import image from './__mocks__/assets/image.jpeg';
-import { Image } from './image';
-import { PLACEHOLDER } from './config';
+import type { Meta, StoryObj } from "@storybook/react";
+import { mockImage } from "./__mocks__/image";
+import { Image } from "./image";
+import { PLACEHOLDER } from "./config";
 
 const meta: Meta<typeof Image> = {
-  title: 'Shared/Image',
+  title: "Components/Image",
   component: Image,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    src: image.src,
-    alt: 'Alternative text',
+    src: mockImage,
+    alt: "Alternative text",
     isSquare: true,
     isRound: false,
     placeholder: PLACEHOLDER,

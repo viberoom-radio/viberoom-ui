@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { RichText } from './rich-text';
-import { fixture } from './__mocks__/constants';
+import type { Meta, StoryObj } from "@storybook/react";
+import { RichText } from "./rich-text";
+import { fixture } from "./__mocks__/constants";
 
 const meta: Meta<typeof RichText> = {
-  title: 'Shared/RichText',
+  title: "Components/RichText",
   component: RichText,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
     value: fixture,
   },

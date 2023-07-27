@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { palette } from 'shared/styles/theme';
-import { StyledProps } from './types';
+import styled, { css } from "styled-components";
+import { palette } from "../../shared/styles/theme";
+import { StyledProps } from "./types";
 
 export const ButtonIcon = styled.span`
   display: inline-flex;
@@ -54,7 +54,7 @@ export const Button = styled.button<StyledProps>`
   white-space: nowrap;
   cursor: pointer;
   box-shadow: ${({ $color }) =>
-    $color === 'transparent' ? 'none' : `0 4px 4px -4px ${palette.bg.default}`};
+    $color === "transparent" ? "none" : `0 4px 4px -4px ${palette.bg.default}`};
 
   &:link,
   &:hover {
@@ -85,8 +85,6 @@ export const Button = styled.button<StyledProps>`
     ${({ isFluidMobile }) => isFluidMobile && fluidStyles}
   }
 `;
-
-export const ButtonLink = Button.withComponent('a');
 
 export const ButtonText = styled.span`
   padding: 0 0.8rem;

@@ -1,12 +1,7 @@
-import { IOS_APP_URL } from 'shared/constants';
-import { Button } from 'shared/ui/button';
-import { IosBadgetIcon } from './components';
+import { Button } from "../button";
+import { IosBadgetIcon } from "./components/ios-badge-icon";
+import { Props } from "./types";
 
-export const IosBadge = () => (
-  <Button
-    href={IOS_APP_URL}
-    isPlain
-    color="transparent"
-    icon={<IosBadgetIcon />}
-  />
+export const IosBadge = ({ url }: Props) => (
+  <Button href={url} isPlain color="transparent" icon={<IosBadgetIcon />} />
 );

@@ -1,5 +1,8 @@
-import { Socials } from 'shared/types/socials';
-
 export type Props = {
-  socials: Socials;
+  audiusUrl?: string;
+  bandcampUrl?: string;
+  instagramUrl?: string;
+  mixcloudUrl?: string;
+  soundcloudUrl?: string;
+  spotifyUrl?: string;
 };

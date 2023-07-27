@@ -1,13 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { IosBadge } from './ios-badge';
+import { IosBadge } from "./ios-badge";
 
 const meta: Meta<typeof IosBadge> = {
-  title: 'Shared/IosBadge',
+  title: "Components/IosBadge",
   component: IosBadge,
-  tags: ['autodocs'],
-  render() {
-    return <IosBadge />;
+  tags: ["autodocs"],
+  args: {
+    url: "#",
+  },
+  render({ ...props }) {
+    return <IosBadge {...props} />;
   },
 };
 

@@ -1,8 +1,8 @@
-import { Image } from 'shared/ui/image';
-import { Props } from './types';
-import * as Styled from './styles';
+import { Image } from "../image";
+import { Props } from "./types";
+import * as Styled from "./styles";
 
-export const Artist = ({ name, userpic, size = 'default' }: Props) => (
+export const Artist = ({ name, userpic, size = "default" }: Props) => (
   <Styled.Artist size={size}>
     <Styled.ArtistUserpic>
       <Image src={userpic} alt={name} isSquare isRound />

@@ -1,4 +1,4 @@
-import * as Icons from './components';
+import * as Icons from "./components";
 
 export type IconName = keyof typeof Icons;
 
@@ -9,6 +9,6 @@ export type Props = {
 };
 
 export type SvgProps = {
-  color: string;
-  size: number;
+  color?: string;
+  size?: number;
 };

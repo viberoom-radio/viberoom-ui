@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { WithControlledState } from 'shared/lib/storybook';
-import { RangeInput } from './range-input';
+import type { Meta, StoryObj } from "@storybook/react";
+import { WithControlledState } from "../../lib/storybook";
+import { RangeInput } from "./range-input";
+import { Props } from "./types";
 
 const meta: Meta<typeof RangeInput> = {
-  title: 'Shared/RangeInput',
+  title: "Components/RangeInput",
   component: RangeInput,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
     min: 0,
     max: 1,

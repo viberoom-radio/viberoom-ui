@@ -1,23 +1,23 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Icon } from './icon';
-import * as Icons from './components';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Icon } from "./icon";
+import * as Icons from "./components";
 
 const firstIconName = Object.keys(Icons)[0] as keyof typeof Icons;
 
 const meta: Meta<typeof Icon> = {
-  title: 'Shared/Icon',
+  title: "Components/Icon",
   component: Icon,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
     name: firstIconName,
     size: 24,
-    color: '#ffffff',
+    color: "#ffffff",
   },
   argTypes: {
     name: {
       options: Object.keys(Icons),
       control: {
-        type: 'select',
+        type: "select",
       },
     },
   },

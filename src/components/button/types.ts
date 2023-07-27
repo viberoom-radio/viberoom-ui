@@ -1,6 +1,6 @@
-import { PropsWithChildren, ReactElement, SyntheticEvent } from 'react';
+import { PropsWithChildren, ReactElement, SyntheticEvent } from "react";
 
-type ButtonColor = 'primary' | 'secondary' | 'transparent';
+type ButtonColor = "primary" | "secondary" | "transparent";
 
 export type Props = PropsWithChildren<{
   icon?: ReactElement;
@@ -29,9 +29,9 @@ export type Props = PropsWithChildren<{
 }>;
 
 export type StyledProps = {
-  $color?: ButtonColor;
-  isDisabled?: Props['isDisabled'];
-  isPlain?: Props['isPlain'];
-  isFluid?: Props['isFluid'];
-  isFluidMobile?: Props['isFluidMobile'];
+  $color: ButtonColor;
+  isDisabled?: Props["isDisabled"];
+  isPlain?: Props["isPlain"];
+  isFluid?: Props["isFluid"];
+  isFluidMobile?: Props["isFluidMobile"];
 };

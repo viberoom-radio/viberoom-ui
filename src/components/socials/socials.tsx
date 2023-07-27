@@ -1,61 +1,56 @@
-import { Button } from 'shared/ui/button';
-import { ButtonGroup } from 'shared/ui/button-group';
-import { Icon } from 'shared/ui/icon';
-import { Props } from './types';
+import { Button } from "../button";
+import { ButtonGroup } from "../button-group";
+import { Icon } from "../icon";
+import { Props } from "./types";
 
-export const Socials = ({ socials }: Props) => (
+export const Socials = ({
+  audiusUrl,
+  bandcampUrl,
+  instagramUrl,
+  mixcloudUrl,
+  soundcloudUrl,
+  spotifyUrl,
+}: Props) => (
   <ButtonGroup>
-    {socials?.bandcamp_url && (
-      <Button
-        icon={<Icon name="Bandcamp" />}
-        href={socials.bandcamp_url}
-        isFluidMobile
-      >
+    {bandcampUrl && (
+      <Button icon={<Icon name="Bandcamp" />} href={bandcampUrl} isFluidMobile>
         Bandcamp
       </Button>
     )}
-    {socials?.spotify_url && (
+    {spotifyUrl && (
       <Button
         icon={<Icon name="SpotifyFilled" />}
-        href={socials.spotify_url}
+        href={spotifyUrl}
         isFluidMobile
       >
         Spotify
       </Button>
     )}
-    {socials?.instagram_url && (
+    {instagramUrl && (
       <Button
         icon={<Icon name="Instagram" />}
-        href={socials.instagram_url}
+        href={instagramUrl}
         isFluidMobile
       >
         Instagram
       </Button>
     )}
-    {socials?.soundcloud_url && (
+    {soundcloudUrl && (
       <Button
         icon={<Icon name="Soundcloud" />}
-        href={socials.soundcloud_url}
+        href={soundcloudUrl}
         isFluidMobile
       >
         SoundCloud
       </Button>
     )}
-    {socials?.audius_url && (
-      <Button
-        icon={<Icon name="Audius" />}
-        href={socials.audius_url}
-        isFluidMobile
-      >
+    {audiusUrl && (
+      <Button icon={<Icon name="Audius" />} href={audiusUrl} isFluidMobile>
         Audius
       </Button>
     )}
-    {socials?.mixcloud_url && (
-      <Button
-        icon={<Icon name="Mixcloud" />}
-        href={socials.mixcloud_url}
-        isFluidMobile
-      >
+    {mixcloudUrl && (
+      <Button icon={<Icon name="Mixcloud" />} href={mixcloudUrl} isFluidMobile>
         Mixcloud
       </Button>
     )}

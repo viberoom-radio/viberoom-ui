@@ -4,10 +4,11 @@ export type Props = {
   isRound?: boolean;
   isSquare?: boolean;
   placeholder?: string;
+  onError?: () => void;
 };
 
 export type StyledProps = {
-  isRound?: Props['isRound'];
-  isSquare?: Props['isSquare'];
+  isRound?: Props["isRound"];
+  isSquare?: Props["isSquare"];
   isLoading?: boolean;
 };

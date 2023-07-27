@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { palette } from 'shared/styles/theme';
+import styled from "styled-components";
+import { palette } from "../../shared/styles/theme";
 
-const linkBorderSize = '1px';
+const linkBorderSize = "1px";
 
 export const Link = styled.a`
   display: inline-flex;

@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Input } from './input';
+import { Input } from "./input";
 
 const meta: Meta<typeof Input> = {
-  title: 'Shared/Input',
+  title: "Components/Input",
   component: Input,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    defaultValue: '',
+    defaultValue: "",
   },
   render({ ...props }) {
     return <Input {...props} />;
@@ -21,6 +21,6 @@ export const Default: Story = {};
 
 export const Filled: Story = {
   args: {
-    defaultValue: 'Value',
+    defaultValue: "Value",
   },
 };

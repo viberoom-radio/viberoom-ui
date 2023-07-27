@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { palette } from 'shared/styles/theme';
-import { StyledProps } from './types';
+import styled, { css } from "styled-components";
+import { palette } from "../../shared/styles/theme";
+import { StyledProps } from "./types";
 
 export const ArtistUserpic = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ export const Artist = styled.div<StyledProps>`
   user-select: none;
   transition: all 0.2s;
 
-  ${({ size }) => size === 'small' && smallStyles}
+  ${({ size }) => size === "small" && smallStyles}
 `;
 
 export const ArtistInfo = styled.ul`

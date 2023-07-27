@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import { palette } from 'shared/styles/theme';
+import styled, { keyframes } from "styled-components";
+import { palette } from "../../shared/styles/theme";
 
 const fadeIn = keyframes`
   from {

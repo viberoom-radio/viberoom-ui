@@ -1,7 +1,7 @@
-import { PortableText } from '@portabletext/react';
-import { Link } from 'shared/ui/link';
-import { Quote } from 'shared/ui/quote';
-import { Props, Components } from './types';
+import { PortableText } from "@portabletext/react";
+import { Link } from "../link";
+import { Quote } from "../quote";
+import { Props, Components } from "./types";
 
 const components: Components = {
   marks: {

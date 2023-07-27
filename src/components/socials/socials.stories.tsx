@@ -1,19 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Socials } from './socials';
+import { Socials } from "./socials";
 
 const meta: Meta<typeof Socials> = {
-  title: 'Shared/Socials',
+  title: "Components/Socials",
   component: Socials,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    socials: {
-      spotify_url: 'https://example.com',
-      instagram_url: 'https://example.com',
-      soundcloud_url: 'https://example.com',
-      audius_url: 'https://example.com',
-      mixcloud_url: 'https://example.com',
-    },
+    spotifyUrl: "https://example.com",
+    instagramUrl: "https://example.com",
+    soundcloudUrl: "https://example.com",
+    audiusUrl: "https://example.com",
+    mixcloudUrl: "https://example.com",
   },
   render({ ...props }) {
     return <Socials {...props} />;

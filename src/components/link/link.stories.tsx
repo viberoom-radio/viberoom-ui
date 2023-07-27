@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Link } from './link';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Link } from "./link";
 
 const meta: Meta<typeof Link> = {
-  title: 'Shared/Link',
+  title: "Components/Link",
   component: Link,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    children: 'Link',
-    href: '#',
+    children: "Link",
+    href: "#",
   },
   render({ ...props }) {
     return <Link {...props} />;
@@ -21,12 +21,12 @@ export const Default: Story = {};
 
 export const External: Story = {
   args: {
-    href: 'https://example.com',
+    href: "https://example.com",
   },
 };
 
 export const Internal: Story = {
   args: {
-    href: '/#',
+    href: "/#",
   },
 };
