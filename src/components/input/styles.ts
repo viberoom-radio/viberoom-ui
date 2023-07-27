@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { palette, typography } from "../../shared/styles/theme";
+import { palette, typography } from "../../styles/theme";
 
 export const Input = styled.input`
   width: 100%;

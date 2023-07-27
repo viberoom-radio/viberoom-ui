@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { palette } from "../../shared/styles/theme";
+import { palette } from "../../styles/theme";
 
 export const Quote = styled.blockquote`
   margin: 0;

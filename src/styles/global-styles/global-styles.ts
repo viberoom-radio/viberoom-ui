@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { palette } from "../../styles/theme";
-import { typography } from "../../styles/theme";
+import { palette } from "../theme";
+import { typography } from "../theme";
 
 export const GlobalStyles = createGlobalStyle`
   * {
