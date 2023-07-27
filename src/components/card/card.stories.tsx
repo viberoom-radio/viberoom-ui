@@ -17,6 +17,11 @@ const meta: Meta<typeof Card> = {
       </Card.Body>
     ),
   },
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
   render(props) {
     return <Card {...props} />;
   },

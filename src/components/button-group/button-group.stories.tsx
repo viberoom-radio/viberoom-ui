@@ -7,7 +7,7 @@ const meta: Meta<typeof ButtonGroup> = {
   component: ButtonGroup,
   tags: ["autodocs"],
   args: {
-    isStacked: true,
+    isStacked: false,
   },
   render({ ...props }) {
     return (

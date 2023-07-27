@@ -7,11 +7,12 @@ const meta: Meta<typeof Socials> = {
   component: Socials,
   tags: ["autodocs"],
   args: {
-    spotifyUrl: "https://example.com",
-    instagramUrl: "https://example.com",
-    soundcloudUrl: "https://example.com",
     audiusUrl: "https://example.com",
+    bandcampUrl: "https://example.com",
+    instagramUrl: "https://example.com",
     mixcloudUrl: "https://example.com",
+    soundcloudUrl: "https://example.com",
+    spotifyUrl: "https://example.com",
   },
   render({ ...props }) {
     return <Socials {...props} />;

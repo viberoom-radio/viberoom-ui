@@ -10,6 +10,7 @@ const meta: Meta<typeof Artist> = {
   args: {
     name: "Dweeb",
     userpic: artistImage,
+    size: "default",
   },
   render({ ...props }) {
     return <Artist {...props} />;

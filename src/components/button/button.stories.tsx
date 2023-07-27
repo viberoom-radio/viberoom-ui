@@ -16,6 +16,17 @@ const meta: Meta<typeof Button> = {
     isFluidMobile: false,
     ariaLabel: "button",
   },
+  argTypes: {
+    icon: {
+      options: Object.keys(Icons),
+      mapping: Object.fromEntries(
+        Object.entries(Icons).map(([name]) => [
+          name,
+          <Icon name={name as keyof typeof Icons} key={name} />,
+        ])
+      ),
+    },
+  },
   render({ ...props }) {
     return <Button {...props} />;
   },
@@ -45,16 +56,5 @@ export const Transparent: Story = {
 export const WithIcon: Story = {
   args: {
     icon: <Icon name="AppleMusic" />,
-  },
-  argTypes: {
-    icon: {
-      options: Object.keys(Icons),
-      mapping: Object.fromEntries(
-        Object.entries(Icons).map(([name]) => [
-          name,
-          <Icon name={name as keyof typeof Icons} key={name} />,
-        ])
-      ),
-    },
   },
 };

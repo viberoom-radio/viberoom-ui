@@ -9,6 +9,11 @@ const meta: Meta<typeof RichText> = {
   args: {
     value: fixture,
   },
+  argTypes: {
+    value: {
+      control: false,
+    },
+  },
   render({ ...props }) {
     return <RichText {...props} />;
   },
