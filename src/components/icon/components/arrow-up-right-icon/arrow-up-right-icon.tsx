@@ -1,4 +1,4 @@
-import { SvgProps } from 'components/icon/types'
+import { SvgProps } from '../../types'
 
 export const ArrowUpRightIcon = ({
   color = 'currentColor',
