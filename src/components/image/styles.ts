@@ -58,11 +58,11 @@ export const Image = styled.div<StyledProps>`
   max-height: 100%;
   border-radius: 0.4rem;
 
-  ${({ isLoading }) => isLoading && loadingStyles}
+  ${({ $isLoading }) => $isLoading && loadingStyles}
 
-  ${({ isSquare }) => isSquare && squareStyles}
+  ${({ $isSquare }) => $isSquare && squareStyles}
   
-  ${({ isRound }) => isRound && roundStyles}
+  ${({ $isRound }) => $isRound && roundStyles}
   
   img {
     width: 100%;

@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
-import { Props } from './types'
+import type { StyledProps } from './types'
 
 const stackedStyles = css`
   flex-direction: column;
 `
 
-export const ButtonGroup = styled.ul<Props>`
+export const ButtonGroup = styled.ul<StyledProps>`
   display: flex;
   flex-wrap: wrap;
   max-width: calc(100% + 1rem);
@@ -18,7 +18,7 @@ export const ButtonGroup = styled.ul<Props>`
     margin-bottom: -0.5rem;
   }
 
-  ${({ isStacked }) => isStacked && stackedStyles}
+  ${({ $isStacked }) => $isStacked && stackedStyles}
 
   @media only screen and (max-width: 768px) {
     ${stackedStyles}

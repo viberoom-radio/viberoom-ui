@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { palette } from '../../styles/theme'
-import { Props } from './types'
+import type { StyledProps } from './types'
 
 const centeredStyles = css`
   text-align: center;
@@ -11,7 +11,7 @@ const primaryStyles = css`
   border: none;
 `
 
-export const Card = styled.div<Props>`
+export const Card = styled.div<StyledProps>`
   overflow: hidden;
   position: relative;
   display: flex;
@@ -26,7 +26,7 @@ export const Card = styled.div<Props>`
     border: none;
   }
 
-  ${({ align }) => align === 'center' && centeredStyles};
+  ${({ $align }) => $align === 'center' && centeredStyles};
 
-  ${({ isPrimary }) => isPrimary && primaryStyles};
+  ${({ $isPrimary }) => $isPrimary && primaryStyles};
 `

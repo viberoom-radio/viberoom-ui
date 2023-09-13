@@ -8,7 +8,7 @@ export type Props = {
 }
 
 export type StyledProps = {
-  isRound?: Props['isRound']
-  isSquare?: Props['isSquare']
-  isLoading?: boolean
+  $isRound?: Props['isRound']
+  $isSquare?: Props['isSquare']
+  $isLoading?: boolean
 }
