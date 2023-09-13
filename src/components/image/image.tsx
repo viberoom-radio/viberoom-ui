@@ -23,7 +23,11 @@ export const Image = ({
   }
 
   return (
-    <Styled.Image isLoading={!isLoaded} isSquare={isSquare} isRound={isRound}>
+    <Styled.Image
+      $isLoading={!isLoaded}
+      $isSquare={isSquare}
+      $isRound={isRound}
+    >
       <img
         src={src}
         alt={alt}

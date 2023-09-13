@@ -1,7 +1,7 @@
 import { Button } from '../button'
 import { ButtonGroup } from '../button-group'
 import { Icon } from '../icon'
-import { Props } from './types'
+import type { Props } from './types'
 
 export const Socials = ({
   applemusicUrl,
