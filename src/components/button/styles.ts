@@ -75,14 +75,14 @@ export const Button = styled.button<StyledProps>`
     outline: 2px solid ${palette.brand};
   }
 
-  ${({ isPlain }) => isPlain && plainStyles}
+  ${({ $isPlain }) => $isPlain && plainStyles}
 
-  ${({ isDisabled }) => isDisabled && disabledStyles}
+  ${({ $isDisabled }) => $isDisabled && disabledStyles}
 
-  ${({ isFluid }) => isFluid && fluidStyles}
+  ${({ $isFluid }) => $isFluid && fluidStyles}
   
   @media only screen and (max-width: 768px) {
-    ${({ isFluidMobile }) => isFluidMobile && fluidStyles}
+    ${({ $isFluidMobile }) => $isFluidMobile && fluidStyles}
   }
 `
 

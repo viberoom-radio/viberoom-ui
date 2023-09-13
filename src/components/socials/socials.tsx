@@ -4,6 +4,7 @@ import { Icon } from '../icon'
 import { Props } from './types'
 
 export const Socials = ({
+  applemusicUrl,
   audiusUrl,
   bandcampUrl,
   instagramUrl,
@@ -12,11 +13,6 @@ export const Socials = ({
   spotifyUrl,
 }: Props) => (
   <ButtonGroup>
-    {bandcampUrl && (
-      <Button icon={<Icon name="Bandcamp" />} href={bandcampUrl} isFluidMobile>
-        Bandcamp
-      </Button>
-    )}
     {spotifyUrl && (
       <Button
         icon={<Icon name="SpotifyFilled" />}
@@ -24,6 +20,20 @@ export const Socials = ({
         isFluidMobile
       >
         Spotify
+      </Button>
+    )}
+    {applemusicUrl && (
+      <Button
+        icon={<Icon name="AppleMusic" />}
+        href={applemusicUrl}
+        isFluidMobile
+      >
+        Apple Music
+      </Button>
+    )}
+    {bandcampUrl && (
+      <Button icon={<Icon name="Bandcamp" />} href={bandcampUrl} isFluidMobile>
+        Bandcamp
       </Button>
     )}
     {instagramUrl && (

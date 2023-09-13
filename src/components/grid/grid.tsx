@@ -9,9 +9,9 @@ export const Grid = ({
   children,
 }: Props) => (
   <Styled.Grid
-    columns={columns}
-    columnsSmall={columnsSmall}
-    columnsLarge={columnsLarge}
+    $columns={columns}
+    $columnsSmall={columnsSmall}
+    $columnsLarge={columnsLarge}
   >
     {children}
   </Styled.Grid>

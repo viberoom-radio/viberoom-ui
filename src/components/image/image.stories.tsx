@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { mockImage } from './__mocks__/image'
 import { Image } from './image'
-import { PLACEHOLDER } from './config'
+import { PLACEHOLDER } from './constants'
 
 const meta: Meta<typeof Image> = {
   title: 'Components/Image',

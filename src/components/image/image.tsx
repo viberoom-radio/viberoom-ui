@@ -1,8 +1,8 @@
 import { useRef } from 'react'
-import { PLACEHOLDER } from './config'
-import { Props } from './types'
-import * as Styled from './styles'
+import { PLACEHOLDER } from './constants'
 import { useLazyLoad } from './hooks'
+import * as Styled from './styles'
+import type { Props } from './types'
 
 export const Image = ({
   src,
@@ -19,10 +19,6 @@ export const Image = ({
     if (imageRef.current) {
       imageRef.current.src = placeholder
     }
-    /**
-     * @todo pass error handler that fires a Sentry exception:
-     * `Sentry.captureException(new Error(`image_load_error: "${alt}"`));`
-     */
     onError?.()
   }
 

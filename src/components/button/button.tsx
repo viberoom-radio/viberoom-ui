@@ -35,10 +35,10 @@ export const Button = ({
     return (
       <Styled.Button
         $color={color}
-        isDisabled={isDisabled}
-        isPlain={isPlain}
-        isFluid={isFluid}
-        isFluidMobile={isFluidMobile}
+        $isDisabled={isDisabled}
+        $isPlain={isPlain}
+        $isFluid={isFluid}
+        $isFluidMobile={isFluidMobile}
         onClick={onClick}
         onFocus={onFocus}
         onBlur={onBlur}
@@ -58,10 +58,10 @@ export const Button = ({
       <Styled.Button
         as="a"
         $color={color}
-        isDisabled={isDisabled}
-        isPlain={isPlain}
-        isFluid={isFluid}
-        isFluidMobile={isFluidMobile}
+        $isDisabled={isDisabled}
+        $isPlain={isPlain}
+        $isFluid={isFluid}
+        $isFluidMobile={isFluidMobile}
         href={href}
         target="_blank"
         rel="noopener noreferrer"
@@ -87,10 +87,10 @@ export const Button = ({
       <Styled.Button
         as="a"
         $color={color}
-        isDisabled={isDisabled}
-        isPlain={isPlain}
-        isFluid={isFluid}
-        isFluidMobile={isFluidMobile}
+        $isDisabled={isDisabled}
+        $isPlain={isPlain}
+        $isFluid={isFluid}
+        $isFluidMobile={isFluidMobile}
       >
         {renderChildren()}
       </Styled.Button>

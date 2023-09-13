@@ -30,8 +30,8 @@ export type Props = PropsWithChildren<{
 
 export type StyledProps = {
   $color: ButtonColor
-  isDisabled?: Props['isDisabled']
-  isPlain?: Props['isPlain']
-  isFluid?: Props['isFluid']
-  isFluidMobile?: Props['isFluidMobile']
+  $isDisabled?: Props['isDisabled']
+  $isPlain?: Props['isPlain']
+  $isFluid?: Props['isFluid']
+  $isFluidMobile?: Props['isFluidMobile']
 }

@@ -13,11 +13,13 @@ module.exports = {
       file: packageJson.main,
       format: 'cjs',
       sourcemap: true,
+      interop: 'compat',
     },
     {
       file: packageJson.module,
       format: 'esm',
       sourcemap: true,
+      interop: 'compat',
     },
   ],
   plugins: [
