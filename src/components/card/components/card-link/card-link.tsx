@@ -7,7 +7,7 @@ export const CardLink = ({ children, href }: Props) => {
 
   if (isInternal) {
     return (
-      <NextLink href={href} passHref>
+      <NextLink href={href} passHref legacyBehavior>
         <Styled.CardLink onClick={(event) => event.stopPropagation()}>
           {children}
         </Styled.CardLink>

@@ -25,7 +25,7 @@ export const Link = ({ href, children }: Props) => {
 
   if (isInternal) {
     return (
-      <NextLink href={href} passHref>
+      <NextLink href={href} passHref legacyBehavior>
         <Styled.Link onClick={(event) => event.stopPropagation()}>
           {children}
           {renderIcon()}

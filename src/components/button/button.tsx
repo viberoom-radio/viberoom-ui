@@ -83,7 +83,7 @@ export const Button = ({
   }
 
   return (
-    <Link href={href}>
+    <Link href={href} passHref legacyBehavior>
       <Styled.Button
         as="a"
         $color={color}
