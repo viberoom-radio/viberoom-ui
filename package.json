@@ -43,6 +43,7 @@
     "@storybook/testing-library": "^0.2.0",
     "@types/react": "18.0.25",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@viberoom/prettier-config": "1.0.1",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "8.9.0",
     "eslint-config-standard-with-typescript": "^37.0.0",
