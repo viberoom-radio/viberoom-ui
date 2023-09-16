@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const CardFooter = styled.footer`
   margin-top: auto;
@@ -7,4 +7,4 @@ export const CardFooter = styled.footer`
   @media only screen and (max-width: 768px) {
     padding: 0 0.5rem 0.5rem 0.5rem;
   }
-`
+`;

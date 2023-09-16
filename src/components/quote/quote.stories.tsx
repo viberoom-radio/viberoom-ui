@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { Quote } from './quote'
+import { Quote } from './quote';
 
 const meta: Meta<typeof Quote> = {
   title: 'Components/Quote',
@@ -11,11 +11,11 @@ const meta: Meta<typeof Quote> = {
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima provident illum nam excepturi repudiandae in nulla soluta possimus est, doloremque alias porro, id corporis blanditiis temporibus molestias culpa animi totam.',
   },
   render({ ...props }) {
-    return <Quote {...props} />
+    return <Quote {...props} />;
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Quote>
+export default meta;
+type Story = StoryObj<typeof Quote>;
 
-export const Default: Story = {}
+export const Default: Story = {};

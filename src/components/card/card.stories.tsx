@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '../button'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '../button';
 
-import { Card } from './card'
-import { heading, longText } from './__mocks__/constants'
+import { Card } from './card';
+import { heading, longText } from './__mocks__/constants';
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',
@@ -23,26 +23,26 @@ const meta: Meta<typeof Card> = {
     },
   },
   render(props) {
-    return <Card {...props} />
+    return <Card {...props} />;
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Card>
+export default meta;
+type Story = StoryObj<typeof Card>;
 
-export const Default: Story = {}
+export const Default: Story = {};
 
 export const Primary: Story = {
   args: {
     isPrimary: true,
   },
-}
+};
 
 export const Centered: Story = {
   args: {
     align: 'center',
   },
-}
+};
 
 export const WithHeading: Story = {
   args: {
@@ -53,7 +53,7 @@ export const WithHeading: Story = {
       </>
     ),
   },
-}
+};
 
 export const WithFooter: Story = {
   args: {
@@ -68,4 +68,4 @@ export const WithFooter: Story = {
       </>
     ),
   },
-}
+};

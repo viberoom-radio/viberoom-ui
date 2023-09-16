@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Icon } from './icon'
-import * as Icons from './components'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Icon } from './icon';
+import * as Icons from './components';
 
-const firstIconName = Object.keys(Icons)[0] as keyof typeof Icons
+const firstIconName = Object.keys(Icons)[0] as keyof typeof Icons;
 
 const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
@@ -22,11 +22,11 @@ const meta: Meta<typeof Icon> = {
     },
   },
   render({ ...props }) {
-    return <Icon {...props} />
+    return <Icon {...props} />;
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Icon>
+export default meta;
+type Story = StoryObj<typeof Icon>;
 
-export const Default: Story = {}
+export const Default: Story = {};

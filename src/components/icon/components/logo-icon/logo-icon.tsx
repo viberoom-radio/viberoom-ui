@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types'
+import { SvgProps } from '../../types';
 
 export const LogoIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
   <svg
@@ -25,4 +25,4 @@ export const LogoIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
       />
     </g>
   </svg>
-)
+);

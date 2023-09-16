@@ -1,9 +1,9 @@
-import NextLink from 'next/link'
-import { Props } from './types'
-import * as Styled from './styles'
+import NextLink from 'next/link';
+import { Props } from './types';
+import * as Styled from './styles';
 
 export const CardLink = ({ children, href }: Props) => {
-  const isInternal = href && href[0] === '/'
+  const isInternal = href && href[0] === '/';
 
   if (isInternal) {
     return (
@@ -12,12 +12,12 @@ export const CardLink = ({ children, href }: Props) => {
           {children}
         </Styled.CardLink>
       </NextLink>
-    )
+    );
   }
 
   return (
     <Styled.CardLink href={href} target="_blank" rel="noopener noreferrer">
       {children}
     </Styled.CardLink>
-  )
-}
+  );
+};

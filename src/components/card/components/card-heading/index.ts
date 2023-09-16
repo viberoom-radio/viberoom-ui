@@ -1,1 +1,1 @@
-export { CardHeading } from './card-heading'
+export { CardHeading } from './card-heading';

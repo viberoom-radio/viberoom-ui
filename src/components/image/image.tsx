@@ -1,8 +1,8 @@
-import { useRef } from 'react'
-import { PLACEHOLDER } from './constants'
-import { useLazyLoad } from './hooks'
-import * as Styled from './styles'
-import type { Props } from './types'
+import { useRef } from 'react';
+import { PLACEHOLDER } from './constants';
+import { useLazyLoad } from './hooks';
+import * as Styled from './styles';
+import type { Props } from './types';
 
 export const Image = ({
   src,
@@ -12,15 +12,15 @@ export const Image = ({
   isRound = false,
   placeholder = PLACEHOLDER,
 }: Props) => {
-  const imageRef = useRef<HTMLImageElement>(null)
-  const { isLoaded } = useLazyLoad(imageRef, placeholder)
+  const imageRef = useRef<HTMLImageElement>(null);
+  const { isLoaded } = useLazyLoad(imageRef, placeholder);
 
   const handleError = () => {
     if (imageRef.current) {
-      imageRef.current.src = placeholder
+      imageRef.current.src = placeholder;
     }
-    onError?.()
-  }
+    onError?.();
+  };
 
   return (
     <Styled.Image
@@ -36,5 +36,5 @@ export const Image = ({
         onError={handleError}
       />
     </Styled.Image>
-  )
-}
+  );
+};

@@ -1,1 +1,1 @@
-export { SpotifyFilledIcon } from './spotify-filled-icon'
+export { SpotifyFilledIcon } from './spotify-filled-icon';

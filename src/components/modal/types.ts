@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react';
 
 export type Props = PropsWithChildren<{
-  isShown: boolean
-  close: () => void
-}>
+  isShown: boolean;
+  close: () => void;
+}>;

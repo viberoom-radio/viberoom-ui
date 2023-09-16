@@ -1,1 +1,1 @@
-export { PlayCircleIcon } from './play-circle-icon'
+export { PlayCircleIcon } from './play-circle-icon';

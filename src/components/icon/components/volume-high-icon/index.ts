@@ -1,1 +1,1 @@
-export { VolumeHighIcon } from './volume-high-icon'
+export { VolumeHighIcon } from './volume-high-icon';

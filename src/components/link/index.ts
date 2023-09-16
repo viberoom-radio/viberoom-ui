@@ -1,2 +1,2 @@
-export { Link } from './link'
-export { Props as LinkProps } from './types'
+export { Link } from './link';
+export { Props as LinkProps } from './types';

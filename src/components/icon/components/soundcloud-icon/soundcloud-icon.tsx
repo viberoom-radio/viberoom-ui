@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types'
+import { SvgProps } from '../../types';
 
 export const SoundcloudIcon = ({
   color = 'currentColor',
@@ -17,4 +17,4 @@ export const SoundcloudIcon = ({
       <path d="M42.5,21c-0.5,0-1,0.1-1.5,0.2C40.5,15.5,35.8,11,30,11c-3.6,0-7,1.8-9,4.7V36h21.5c4.1,0,7.5-3.4,7.5-7.5C50,24.4,46.6,21,42.5,21z" />
     </g>
   </svg>
-)
+);

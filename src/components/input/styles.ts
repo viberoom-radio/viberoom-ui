@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { palette, typography } from '../../styles/theme'
+import styled from 'styled-components';
+import { palette, typography } from '../../styles/theme';
 
 export const Input = styled.input`
   width: 100%;
@@ -21,4 +21,4 @@ export const Input = styled.input`
     color: ${palette.typo.primary};
     outline: 2px solid ${palette.brand};
   }
-`
+`;

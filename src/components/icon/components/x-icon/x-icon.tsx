@@ -1,4 +1,4 @@
-import { SvgProps } from '../../types'
+import { SvgProps } from '../../types';
 
 export const XIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
   <svg
@@ -15,4 +15,4 @@ export const XIcon = ({ color = 'currentColor', size = 24 }: SvgProps) => (
     <line x1="18" y1="6" x2="6" y2="18" />
     <line x1="6" y1="6" x2="18" y2="18" />
   </svg>
-)
+);

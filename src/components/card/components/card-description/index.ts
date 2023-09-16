@@ -1,1 +1,1 @@
-export { CardDescription } from './card-description'
+export { CardDescription } from './card-description';

@@ -1,1 +1,1 @@
-export { XIcon } from './x-icon'
+export { XIcon } from './x-icon';

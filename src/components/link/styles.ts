@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { palette } from '../../styles/theme'
+import styled from 'styled-components';
+import { palette } from '../../styles/theme';
 
-const linkBorderSize = '1px'
+const linkBorderSize = '1px';
 
 export const Link = styled.a`
   display: inline-flex;
@@ -34,10 +34,10 @@ export const Link = styled.a`
     box-shadow: inset 0 -1 * ${linkBorderSize} 0 0 ${palette.typo.link};
     border-radius: 2px;
   }
-`
+`;
 
 export const LinkIcon = styled.span`
   display: inline-flex;
   margin-left: 0.4rem;
   opacity: 0.4;
-`
+`;

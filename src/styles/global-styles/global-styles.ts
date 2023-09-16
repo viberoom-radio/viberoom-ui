@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import { palette } from '../theme'
-import { typography } from '../theme'
+import { createGlobalStyle } from 'styled-components';
+import { palette } from '../theme';
+import { typography } from '../theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -79,4 +79,4 @@ export const GlobalStyles = createGlobalStyle`
       margin: 1rem 0rem;
     }
   }
-`
+`;

@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { Icon } from '../icon'
-import { Props } from './types'
-import * as Styled from './styles'
+import Link from 'next/link';
+import { Icon } from '../icon';
+import { Props } from './types';
+import * as Styled from './styles';
 
 export const Button = ({
   children,
@@ -21,15 +21,15 @@ export const Button = ({
   onMouseLeave,
   ariaLabel,
 }: Props) => {
-  const isActionButton = href === '#'
-  const isExternal = href && href !== '#' && href[0] !== '/'
+  const isActionButton = href === '#';
+  const isExternal = href && href !== '#' && href[0] !== '/';
 
   const renderChildren = () => (
     <>
       {icon && <Styled.ButtonIcon>{icon}</Styled.ButtonIcon>}
       {children && <Styled.ButtonText>{children}</Styled.ButtonText>}
     </>
-  )
+  );
 
   if (isActionButton) {
     return (
@@ -50,7 +50,7 @@ export const Button = ({
       >
         {renderChildren()}
       </Styled.Button>
-    )
+    );
   }
 
   if (isExternal) {
@@ -79,7 +79,7 @@ export const Button = ({
           <Icon name="ArrowUpRight" />
         </Styled.ButtonIconRight>
       </Styled.Button>
-    )
+    );
   }
 
   return (
@@ -95,5 +95,5 @@ export const Button = ({
         {renderChildren()}
       </Styled.Button>
     </Link>
-  )
-}
+  );
+};

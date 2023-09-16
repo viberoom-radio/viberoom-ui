@@ -1,1 +1,1 @@
-export { GlobeIcon } from './globe-icon'
+export { GlobeIcon } from './globe-icon';

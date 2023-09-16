@@ -1,1 +1,1 @@
-export { RadioIcon } from './radio-icon'
+export { RadioIcon } from './radio-icon';

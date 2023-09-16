@@ -1,1 +1,1 @@
-export { AudiusIcon } from './audius-icon'
+export { AudiusIcon } from './audius-icon';

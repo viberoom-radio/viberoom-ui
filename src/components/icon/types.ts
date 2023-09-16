@@ -1,14 +1,14 @@
-import * as Icons from './components'
+import * as Icons from './components';
 
-export type IconName = keyof typeof Icons
+export type IconName = keyof typeof Icons;
 
 export type Props = {
-  name: IconName
-  size?: number
-  color?: string
-}
+  name: IconName;
+  size?: number;
+  color?: string;
+};
 
 export type SvgProps = {
-  color?: string
-  size?: number
-}
+  color?: string;
+  size?: number;
+};

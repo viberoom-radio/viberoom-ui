@@ -1,1 +1,1 @@
-export { SoundcloudIcon } from './soundcloud-icon'
+export { SoundcloudIcon } from './soundcloud-icon';

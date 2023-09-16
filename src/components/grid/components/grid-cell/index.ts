@@ -1,1 +1,1 @@
-export { GridCell } from './grid-cell'
+export { GridCell } from './grid-cell';

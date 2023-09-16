@@ -1,30 +1,30 @@
-export { Artist } from './components/artist'
-export type { ArtistProps } from './components/artist'
-export { Button } from './components/button'
-export type { ButtonProps } from './components/button'
-export { ButtonGroup } from './components/button-group'
-export type { ButtonGroupProps } from './components/button-group'
-export { Card } from './components/card'
-export type { CardProps } from './components/card'
-export { Grid } from './components/grid'
-export type { GridProps } from './components/grid'
-export { Icon } from './components/icon'
-export type { IconProps, IconName } from './components/icon'
-export { Image } from './components/image'
-export type { ImageProps } from './components/image'
-export { Input } from './components/input'
-export type { InputProps } from './components/input'
-export { IosBadge } from './components/ios-badge'
-export type { IosBadgeProps } from './components/ios-badge'
-export { Link } from './components/link'
-export type { LinkProps } from './components/link'
-export { Modal } from './components/modal'
-export type { ModalProps } from './components/modal'
-export { Quote } from './components/quote'
-export type { QuoteProps } from './components/quote'
-export { RangeInput } from './components/range-input'
-export type { RangeInputProps } from './components/range-input'
-export { RichText } from './components/rich-text'
-export type { RichTextProps } from './components/rich-text'
-export { Socials } from './components/socials'
-export type { SocialsProps } from './components/socials'
+export { Artist } from './components/artist';
+export type { ArtistProps } from './components/artist';
+export { Button } from './components/button';
+export type { ButtonProps } from './components/button';
+export { ButtonGroup } from './components/button-group';
+export type { ButtonGroupProps } from './components/button-group';
+export { Card } from './components/card';
+export type { CardProps } from './components/card';
+export { Grid } from './components/grid';
+export type { GridProps } from './components/grid';
+export { Icon } from './components/icon';
+export type { IconProps, IconName } from './components/icon';
+export { Image } from './components/image';
+export type { ImageProps } from './components/image';
+export { Input } from './components/input';
+export type { InputProps } from './components/input';
+export { IosBadge } from './components/ios-badge';
+export type { IosBadgeProps } from './components/ios-badge';
+export { Link } from './components/link';
+export type { LinkProps } from './components/link';
+export { Modal } from './components/modal';
+export type { ModalProps } from './components/modal';
+export { Quote } from './components/quote';
+export type { QuoteProps } from './components/quote';
+export { RangeInput } from './components/range-input';
+export type { RangeInputProps } from './components/range-input';
+export { RichText } from './components/rich-text';
+export type { RichTextProps } from './components/rich-text';
+export { Socials } from './components/socials';
+export type { SocialsProps } from './components/socials';

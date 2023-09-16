@@ -54,4 +54,4 @@ export const fixture = [
     children: [{ _type: 'span', marks: [], text: 'Item 6, level 2' }],
     listItem: 'number',
   },
-]
+];

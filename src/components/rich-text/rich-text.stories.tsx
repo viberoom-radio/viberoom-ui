@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { RichText } from './rich-text'
-import { fixture } from './__mocks__/constants'
+import type { Meta, StoryObj } from '@storybook/react';
+import { RichText } from './rich-text';
+import { fixture } from './__mocks__/constants';
 
 const meta: Meta<typeof RichText> = {
   title: 'Components/RichText',
@@ -15,11 +15,11 @@ const meta: Meta<typeof RichText> = {
     },
   },
   render({ ...props }) {
-    return <RichText {...props} />
+    return <RichText {...props} />;
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof RichText>
+export default meta;
+type Story = StoryObj<typeof RichText>;
 
-export const Default: Story = {}
+export const Default: Story = {};

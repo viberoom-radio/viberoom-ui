@@ -1,4 +1,4 @@
 export type Props = {
-  defaultValue?: string
-  onCopy?: () => void
-}
+  defaultValue?: string;
+  onCopy?: () => void;
+};

@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { IosBadge } from './ios-badge'
+import { IosBadge } from './ios-badge';
 
 const meta: Meta<typeof IosBadge> = {
   title: 'Components/IosBadge',
@@ -10,11 +10,11 @@ const meta: Meta<typeof IosBadge> = {
     url: '#',
   },
   render({ ...props }) {
-    return <IosBadge {...props} />
+    return <IosBadge {...props} />;
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof IosBadge>
+export default meta;
+type Story = StoryObj<typeof IosBadge>;
 
-export const Default: Story = {}
+export const Default: Story = {};

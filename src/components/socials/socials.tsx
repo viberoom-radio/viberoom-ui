@@ -1,7 +1,7 @@
-import { Button } from '../button'
-import { ButtonGroup } from '../button-group'
-import { Icon } from '../icon'
-import type { Props } from './types'
+import { Button } from '../button';
+import { ButtonGroup } from '../button-group';
+import { Icon } from '../icon';
+import type { Props } from './types';
 
 export const Socials = ({
   applemusicUrl,
@@ -65,4 +65,4 @@ export const Socials = ({
       </Button>
     )}
   </ButtonGroup>
-)
+);

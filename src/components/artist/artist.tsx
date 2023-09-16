@@ -1,6 +1,6 @@
-import { Image } from '../image'
-import { Props } from './types'
-import * as Styled from './styles'
+import { Image } from '../image';
+import { Props } from './types';
+import * as Styled from './styles';
 
 export const Artist = ({ name, userpic, size = 'default' }: Props) => (
   <Styled.Artist size={size}>
@@ -12,4 +12,4 @@ export const Artist = ({ name, userpic, size = 'default' }: Props) => (
       {name && <Styled.ArtistName>{name}</Styled.ArtistName>}
     </Styled.ArtistInfo>
   </Styled.Artist>
-)
+);

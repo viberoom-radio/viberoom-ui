@@ -1,1 +1,1 @@
-export { VkIcon } from './vk-icon'
+export { VkIcon } from './vk-icon';

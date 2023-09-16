@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components'
-import { ColumnWidth, StyledProps } from './types'
+import styled, { css } from 'styled-components';
+import { ColumnWidth, StyledProps } from './types';
 
 const columnEndStyles = (columnEnd: ColumnWidth) => css`
   grid-column-end: span ${columnEnd};
-`
+`;
 
 export const GridCell = styled.div<StyledProps>`
   display: block;
@@ -18,4 +18,4 @@ export const GridCell = styled.div<StyledProps>`
   @media only screen and (max-width: 768px) {
     ${({ $spanSmall }) => $spanSmall && columnEndStyles($spanSmall)}
   }
-`
+`;

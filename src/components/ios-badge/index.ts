@@ -1,2 +1,2 @@
-export { IosBadge } from './ios-badge'
-export type { Props as IosBadgeProps } from './types'
+export { IosBadge } from './ios-badge';
+export type { Props as IosBadgeProps } from './types';

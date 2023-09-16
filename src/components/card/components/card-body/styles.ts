@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const CardBody = styled.div`
   padding: 1.5rem;
@@ -6,4 +6,4 @@ export const CardBody = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 0.5rem;
   }
-`
+`;
