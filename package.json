@@ -13,7 +13,7 @@
     "build-storybook": "storybook build",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "format": "prettier --write ./src/**/*.{ts,tsx} --ignore-path .gitignore",
-    "publish": "npm publish --access=public"
+    "publish-package": "npm publish --access=public"
   },
   "repository": {
     "type": "git",
