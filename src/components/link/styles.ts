@@ -1,9 +1,10 @@
+import NextLink from 'next/link';
 import styled from 'styled-components';
 import { palette } from '../../styles/theme';
 
 const linkBorderSize = '1px';
 
-export const Link = styled.a`
+export const Link = styled(NextLink)`
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
